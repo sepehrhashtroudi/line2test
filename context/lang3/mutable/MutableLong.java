@@ -1,0 +1,21 @@
+MutableLong
+public Long getValue()
+public void setValue(final long value)
+public void setValue(final Number value)
+public void increment()
+public void decrement()
+public void add(final long operand)
+public void add(final Number operand)
+public void subtract(final long operand)
+public void subtract(final Number operand)
+public int intValue()
+public long longValue()
+public float floatValue()
+public double doubleValue()
+public Long toLong()
+public boolean equals(final Object obj)
+public int hashCode()
+public int compareTo(final MutableLong other)
+public String toString()
+long serialVersionUID=Optional[62986528375L]
+long value

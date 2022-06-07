@@ -1,0 +1,2 @@
+CloneFailedException
+long serialVersionUID=Optional[20091223L]
