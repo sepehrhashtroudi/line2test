@@ -126,6 +126,14 @@ if __name__ == "__main__":
             src_code = f.readlines()
             f.close()
 
+            f = open("src_lines.txt","ab")
+            f.write(str.encode("/".join(path) + "\n"))
+            f.close()
+
+            f = open("tests.txt","ab")
+            f.write(str.encode("/".join(path) + "\n"))
+            f.close()
+            
             f = open(methods_path+"/".join(path),'rb')
             methods = f.readlines()
             f.close()
@@ -211,7 +219,34 @@ if __name__ == "__main__":
         for i in y_test:
             test_tests.write(i)
         
+    with open("test.methods", "rb") as test_methods, open("src_lines.txt","rb") as all_methods, open("test_sorted.methods","wb") as test_methods_with_address,\
+      open("test_sorted.tests","wb") as test_tests_with_address, open("test.tests","rb") as test_tests:
+        all_method_lines = all_methods.readlines()
+        test_method_lines = test_methods.readlines()
+        test_tests_lines = test_tests.readlines()
+        test_methods_sorted = []
+        test_tests_sorted = []
+        for i in all_method_lines:
+          if str.encode(".java") in i:
+            test_methods_sorted.append(i)
+            test_tests_sorted.append(i)
+            continue
+          found = 0
+          for index,j in enumerate(test_method_lines):
+            if j == i:
+              test_tests_sorted.append(test_tests_lines[index])
+              test_methods_sorted.append(i)
+              test_method_lines.pop(index)
+              test_tests_lines.pop(index)
+              found =1
+              break
 
+        for i in test_methods_sorted:
+          test_methods_with_address.write(i)
+        for i in test_tests_sorted:
+          test_tests_with_address.write(i)
+
+           
     # for (root,dirs,files) in os.walk(source_file_path, topdown=True):
     #     # print (root)
     #     # print (files)
