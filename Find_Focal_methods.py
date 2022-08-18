@@ -14,6 +14,12 @@ if os.path.exists("src_lines.txt"):
   os.remove("src_lines.txt")
 if os.path.exists("tests.txt"):
   os.remove("tests.txt")
+if os.path.exists("test_path.txt"):
+  os.remove("test_path.txt")
+if os.path.exists("lines_covered.txt"):
+  os.remove("lines_covered.txt")
+  
+  
 X = []
 Y = []
 if __name__ == "__main__":
@@ -133,6 +139,14 @@ if __name__ == "__main__":
             f = open("tests.txt","ab")
             f.write(str.encode("/".join(path) + "\n"))
             f.close()
+
+            f = open("test_path.txt",'ab')
+            f.write(str.encode("<SRC>"+"/".join(path) + "\n"))
+            f.close()
+
+            f = open("lines_covered.txt",'ab')
+            f.write(str.encode("/".join(path) + "\n"))
+            f.close()
             
             f = open(methods_path+"/".join(path),'rb')
             methods = f.readlines()
@@ -142,15 +156,15 @@ if __name__ == "__main__":
               line_num = method.split(str.encode("<line_num>:"))[1]
               methods2line[int(line_num)] = method
       if "<line>" in line: 
-        line_num = int(line.split(":")[1])
-        src_line = src_code[line_num-1]
+        line_num = int(line.split(":")[1])-1
+        src_line = src_code[line_num]
         nearest_func = 0
         diff = 50000
         function_found_flag = 0
         for key, value in methods2line.items():
-          if line_num-1 >= key:
-            if line_num-1 - key < diff:
-              diff = line_num-1 - key
+          if line_num >= key:
+            if line_num - key < diff:
+              diff = line_num - key
               nearest_func = key
               if src_line.strip() in methods2line[nearest_func]:
                 function_found_flag = 1
@@ -160,6 +174,9 @@ if __name__ == "__main__":
         if function_found_flag == 1:
           f.write(str.encode(" [LINE] ") + src_line.replace(str.encode("\n"), str.encode(" ")).strip() + str.encode(" [LINE] ") + methods2line[nearest_func].split(str.encode("<line_num>:"))[0] + str.encode("\n"))
           X.append(str.encode(" [LINE] ") + src_line.replace(str.encode("\n"), str.encode(" ")).strip() + str.encode(" [LINE] ") + methods2line[nearest_func].split(str.encode("<line_num>:"))[0] + str.encode("\n"))
+          f = open("lines_covered.txt",'ab')
+          f.write(str.encode(str(line_num+1) + "\n"))
+          f.close()
         else:
           pass
           # f.write(src_line )
@@ -185,6 +202,11 @@ if __name__ == "__main__":
         f = open("/".join(path)+".java",'rb')
         tests = f.read()
         f.close()
+
+        f = open("test_path.txt","ab")
+        f.write(str.encode("/".join(path)+".java" +  "\n"))
+        f.close()
+
         tests = tests.split(str.encode("@Test"))
         # print(tests)
         index = 0
@@ -219,23 +241,37 @@ if __name__ == "__main__":
         for i in y_test:
             test_tests.write(i)
         
-    with open("test.methods", "rb") as test_methods, open("src_lines.txt","rb") as all_methods, open("test_sorted.methods","wb") as test_methods_with_address,\
-      open("test_sorted.tests","wb") as test_tests_with_address, open("test.tests","rb") as test_tests:
+    with open("test.methods", "rb") as test_methods, open("test.tests","rb") as test_tests,\
+      open("src_lines.txt","rb") as all_methods,\
+      open("test_sorted.methods","wb") as test_methods_with_address,\
+      open("test_sorted.tests","wb") as test_tests_with_address,\
+      open("test_path.txt","rb") as  test_path,\
+      open("test_path_sorted.txt","wb") as  test_path_sorted,\
+      open("lines_covered.txt","rb") as  lines_covered,\
+      open("lines_covered_test.txt","wb") as  lines_covered_test:
         all_method_lines = all_methods.readlines()
         test_method_lines = test_methods.readlines()
         test_tests_lines = test_tests.readlines()
+        test_path_lines = test_path.readlines()
+        lines_covered_lines = lines_covered.readlines()
         test_methods_sorted = []
         test_tests_sorted = []
-        for i in all_method_lines:
-          if str.encode(".java") in i:
-            test_methods_sorted.append(i)
-            test_tests_sorted.append(i)
+        test_path_sorted_list = []
+        lines_covered_test_list = []
+        for aml_index, all_method_line  in enumerate(all_method_lines):
+          if str.encode(".java") in all_method_line:
+            test_methods_sorted.append(all_method_line)
+            test_tests_sorted.append(all_method_line)
+            test_path_sorted_list.append(str.encode("<SRC>: ") + all_method_line)
+            lines_covered_test_list.append(all_method_line)
             continue
           found = 0
-          for index,j in enumerate(test_method_lines):
-            if j == i:
+          for index, test_method_line in enumerate(test_method_lines):
+            if test_method_line == all_method_line:
               test_tests_sorted.append(test_tests_lines[index])
-              test_methods_sorted.append(i)
+              test_methods_sorted.append(all_method_line)
+              test_path_sorted_list.append(test_path_lines[aml_index])
+              lines_covered_test_list.append(lines_covered_lines[aml_index])
               test_method_lines.pop(index)
               test_tests_lines.pop(index)
               found =1
@@ -245,6 +281,10 @@ if __name__ == "__main__":
           test_methods_with_address.write(i)
         for i in test_tests_sorted:
           test_tests_with_address.write(i)
+        for i in test_path_sorted_list:
+          test_path_sorted.write(i)
+        for i in lines_covered_test_list:
+          lines_covered_test.write(i)
 
            
     # for (root,dirs,files) in os.walk(source_file_path, topdown=True):
