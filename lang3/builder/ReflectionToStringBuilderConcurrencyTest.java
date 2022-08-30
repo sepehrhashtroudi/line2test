@@ -61,23 +61,23 @@ public class ReflectionToStringBuilderConcurrencyTest {
     private static final int DATA_SIZE = 100000;
     private static final int REPEAT = 100;
 
-//    @Test
-//    @Ignore
-//    public void testLinkedList() throws InterruptedException, ExecutionException {
-//        this.testConcurrency(new CollectionHolder<List<Integer>>(new LinkedList<Integer>()));
-//    }
+    @Test
+    @Ignore
+    public void testLinkedList() throws InterruptedException, ExecutionException {
+        this.testConcurrency(new CollectionHolder<List<Integer>>(new LinkedList<Integer>()));
+    }
 
-//    @Test
-//    @Ignore
-//    public void testArrayList() throws InterruptedException, ExecutionException {
-//        this.testConcurrency(new CollectionHolder<List<Integer>>(new ArrayList<Integer>()));
-//    }
+    @Test
+    @Ignore
+    public void testArrayList() throws InterruptedException, ExecutionException {
+        this.testConcurrency(new CollectionHolder<List<Integer>>(new ArrayList<Integer>()));
+    }
 
-//    @Test
-//    @Ignore
-//    public void testCopyOnWriteArrayList() throws InterruptedException, ExecutionException {
-//        this.testConcurrency(new CollectionHolder<List<Integer>>(new CopyOnWriteArrayList<Integer>()));
-//    }
+    @Test
+    @Ignore
+    public void testCopyOnWriteArrayList() throws InterruptedException, ExecutionException {
+        this.testConcurrency(new CollectionHolder<List<Integer>>(new CopyOnWriteArrayList<Integer>()));
+    }
 
     private void testConcurrency(final CollectionHolder<List<Integer>> holder) throws InterruptedException,
             ExecutionException {

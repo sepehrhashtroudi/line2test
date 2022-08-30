@@ -170,7 +170,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
      * @return this, to enable chaining
      */
     public StrBuilder setNullText(String nullText) {
-        if (nullText != null && nullText.length() == 0) {
+        if (nullText != null && nullText.isEmpty()) {
             nullText = null;
         }
         this.nullText = nullText;
@@ -2228,9 +2228,8 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
         }
         if (size <= index + length) {
             return new String(buffer, index, size - index);
-        } else {
-            return new String(buffer, index, length);
         }
+        return new String(buffer, index, length);
     }
 
     //-----------------------------------------------------------------------
@@ -2817,9 +2816,8 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
         protected List<String> tokenize(final char[] chars, final int offset, final int count) {
             if (chars == null) {
                 return super.tokenize(StrBuilder.this.buffer, 0, StrBuilder.this.size());
-            } else {
-                return super.tokenize(chars, offset, count);
             }
+            return super.tokenize(chars, offset, count);
         }
 
         /** {@inheritDoc} */
@@ -2828,9 +2826,8 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
             final String str = super.getContent();
             if (str == null) {
                 return StrBuilder.this.toString();
-            } else {
-                return str;
             }
+            return str;
         }
     }
 

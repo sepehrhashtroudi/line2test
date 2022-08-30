@@ -464,11 +464,20 @@ public class NumberUtils {
             }
         }
         if (pfxLen > 0) { // we have a hex number
+            char firstSigDigit = 0; // strip leading zeroes
+            for(int i = pfxLen; i < str.length(); i++) {
+                firstSigDigit = str.charAt(i);
+                if (firstSigDigit == '0') { // count leading zeroes
+                    pfxLen++;
+                } else {
+                    break;
+                }
+            }
             final int hexDigits = str.length() - pfxLen;
-            if (hexDigits > 16) { // too many for Long
+            if (hexDigits > 16 || (hexDigits == 16 && firstSigDigit > '7')) { // too many for Long
                 return createBigInteger(str);
             }
-            if (hexDigits > 8) { // too many for an int
+            if (hexDigits > 8 || (hexDigits == 8 && firstSigDigit > '7')) { // too many for an int
                 return createLong(str);
             }
             return createInteger(str);
@@ -590,18 +599,22 @@ public class NumberUtils {
         //Must be a Float, Double, BigDecimal
         final boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
         try {
+            if(numDecimals <= 7){// If number has 7 or fewer digits past the decimal point then make it a float
                 final Float f = createFloat(str);
                 if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
                     return f;
                 }
+            }
         } catch (final NumberFormatException nfe) { // NOPMD
             // ignore the bad number
         }
         try {
+            if(numDecimals <= 16){// If number has between 8 and 16 digits past the decimal point then make it a double
                 final Double d = createDouble(str);
                 if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
                     return d;
                 }
+            }
         } catch (final NumberFormatException nfe) { // NOPMD
             // ignore the bad number
         }

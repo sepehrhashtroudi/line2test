@@ -423,7 +423,7 @@ public class StringUtils {
             return null;
         }
         str = strip(str, null);
-        return str.length() == 0 ? null : str;
+        return str.isEmpty() ? null : str;
     }
 
     /**
@@ -520,7 +520,7 @@ public class StringUtils {
             while (start != strLen && Character.isWhitespace(str.charAt(start))) {
                 start++;
             }
-        } else if (stripChars.length() == 0) {
+        } else if (stripChars.isEmpty()) {
             return str;
         } else {
             while (start != strLen && stripChars.indexOf(str.charAt(start)) != INDEX_NOT_FOUND) {
@@ -565,7 +565,7 @@ public class StringUtils {
             while (end != 0 && Character.isWhitespace(str.charAt(end - 1))) {
                 end--;
             }
-        } else if (stripChars.length() == 0) {
+        } else if (stripChars.isEmpty()) {
             return str;
         } else {
             while (end != 0 && stripChars.indexOf(str.charAt(end - 1)) != INDEX_NOT_FOUND) {
@@ -784,7 +784,7 @@ public class StringUtils {
      * @param seq  the CharSequence to check, may be null
      * @param searchChar  the character to find
      * @param startPos  the start position, negative treated as zero
-     * @return the first index of the search character,
+     * @return the first index of the search character (always &ge; startPos),
      *  -1 if no match or {@code null} string input
      * @since 2.0
      * @since 3.0 Changed signature from indexOf(String, int, int) to indexOf(CharSequence, int, int)
@@ -855,7 +855,7 @@ public class StringUtils {
      * @param seq  the CharSequence to check, may be null
      * @param searchSeq  the CharSequence to find, may be null
      * @param startPos  the start position, negative treated as zero
-     * @return the first index of the search CharSequence,
+     * @return the first index of the search CharSequence (always &ge; startPos),
      *  -1 if no match or {@code null} string input
      * @since 2.0
      * @since 3.0 Changed signature from indexOf(String, String, int) to indexOf(CharSequence, CharSequence, int)
@@ -998,7 +998,7 @@ public class StringUtils {
      * @param str  the CharSequence to check, may be null
      * @param searchStr  the CharSequence to find, may be null
      * @param startPos  the start position, negative treated as zero
-     * @return the first index of the search CharSequence,
+     * @return the first index of the search CharSequence (always &ge; startPos),
      *  -1 if no match or {@code null} string input
      * @since 2.5
      * @since 3.0 Changed signature from indexOfIgnoreCase(String, String, int) to indexOfIgnoreCase(CharSequence, CharSequence, int)
@@ -1061,7 +1061,10 @@ public class StringUtils {
      *
      * <p>A {@code null} or empty ("") CharSequence will return {@code -1}.
      * A negative start position returns {@code -1}.
-     * A start position greater than the string length searches the whole string.</p>
+     * A start position greater than the string length searches the whole string.
+     * The search starts at the startPos and works backwards; matches starting after the start
+     * position are ignored.
+     * </p>
      *
      * <pre>
      * StringUtils.lastIndexOf(null, *, *)          = -1
@@ -1077,7 +1080,7 @@ public class StringUtils {
      * @param seq  the CharSequence to check, may be null
      * @param searchChar  the character to find
      * @param startPos  the start position
-     * @return the last index of the search character,
+     * @return the last index of the search character (always &le; startPos),
      *  -1 if no match or {@code null} string input
      * @since 2.0
      * @since 3.0 Changed signature from lastIndexOf(String, int, int) to lastIndexOf(CharSequence, int, int)
@@ -1158,13 +1161,16 @@ public class StringUtils {
     }
 
     /**
-     * <p>Finds the first index within a CharSequence, handling {@code null}.
+     * <p>Finds the last index within a CharSequence, handling {@code null}.
      * This method uses {@link String#lastIndexOf(String, int)} if possible.</p>
      *
      * <p>A {@code null} CharSequence will return {@code -1}.
      * A negative start position returns {@code -1}.
      * An empty ("") search CharSequence always matches unless the start position is negative.
-     * A start position greater than the string length searches the whole string.</p>
+     * A start position greater than the string length searches the whole string.
+     * The search starts at the startPos and works backwards; matches starting after the start
+     * position are ignored.
+     * </p>
      *
      * <pre>
      * StringUtils.lastIndexOf(null, *, *)          = -1
@@ -1176,12 +1182,16 @@ public class StringUtils {
      * StringUtils.lastIndexOf("aabaabaa", "b", -1) = -1
      * StringUtils.lastIndexOf("aabaabaa", "a", 0)  = 0
      * StringUtils.lastIndexOf("aabaabaa", "b", 0)  = -1
+     * StringUtils.lastIndexOf("aabaabaa", "b", 1)  = -1
+     * StringUtils.lastIndexOf("aabaabaa", "b", 2)  = 2
+     * StringUtils.lastIndexOf("aabaabaa", "ba", 2)  = -1
+     * StringUtils.lastIndexOf("aabaabaa", "ba", 2)  = 2
      * </pre>
      *
      * @param seq  the CharSequence to check, may be null
      * @param searchSeq  the CharSequence to find, may be null
      * @param startPos  the start position, negative treated as zero
-     * @return the first index of the search CharSequence,
+     * @return the last index of the search CharSequence (always &le; startPos),
      *  -1 if no match or {@code null} string input
      * @since 2.0
      * @since 3.0 Changed signature from lastIndexOf(String, String, int) to lastIndexOf(CharSequence, CharSequence, int)
@@ -1230,7 +1240,10 @@ public class StringUtils {
      * <p>A {@code null} CharSequence will return {@code -1}.
      * A negative start position returns {@code -1}.
      * An empty ("") search CharSequence always matches unless the start position is negative.
-     * A start position greater than the string length searches the whole string.</p>
+     * A start position greater than the string length searches the whole string.
+     * The search starts at the startPos and works backwards; matches starting after the start
+     * position are ignored.
+     * </p>
      *
      * <pre>
      * StringUtils.lastIndexOfIgnoreCase(null, *, *)          = -1
@@ -1247,7 +1260,7 @@ public class StringUtils {
      * @param str  the CharSequence to check, may be null
      * @param searchStr  the CharSequence to find, may be null
      * @param startPos  the start position
-     * @return the first index of the search CharSequence,
+     * @return the last index of the search CharSequence (always &le; startPos),
      *  -1 if no match or {@code null} input
      * @since 2.5
      * @since 3.0 Changed signature from lastIndexOfIgnoreCase(String, String, int) to lastIndexOfIgnoreCase(CharSequence, CharSequence, int)
@@ -2174,7 +2187,7 @@ public class StringUtils {
         if (isEmpty(str) || separator == null) {
             return str;
         }
-        if (separator.length() == 0) {
+        if (separator.isEmpty()) {
             return EMPTY;
         }
         final int pos = str.indexOf(separator);
@@ -3106,7 +3119,7 @@ public class StringUtils {
         if (str == null) {
             return null;
         }
-        if (str.length() == 0) {
+        if (str.isEmpty()) {
             return ArrayUtils.EMPTY_STRING_ARRAY;
         }
         final char[] c = str.toCharArray();
@@ -4567,7 +4580,7 @@ public class StringUtils {
         // mchyzer Performance note: This creates very few new objects (one major goal)
         // let me know if there are performance requests, we can create a harness to measure
 
-        if (text == null || text.length() == 0 || searchList == null ||
+        if (text == null || text.isEmpty() || searchList == null ||
                 searchList.length == 0 || replacementList == null || replacementList.length == 0) {
             return text;
         }
@@ -4601,7 +4614,7 @@ public class StringUtils {
         // NOTE: logic duplicated below START
         for (int i = 0; i < searchLength; i++) {
             if (noMoreMatchesForReplIndex[i] || searchList[i] == null ||
-                    searchList[i].length() == 0 || replacementList[i] == null) {
+                    searchList[i].isEmpty() || replacementList[i] == null) {
                 continue;
             }
             tempIndex = text.indexOf(searchList[i]);
@@ -4659,7 +4672,7 @@ public class StringUtils {
             // NOTE: logic mostly duplicated above START
             for (int i = 0; i < searchLength; i++) {
                 if (noMoreMatchesForReplIndex[i] || searchList[i] == null ||
-                        searchList[i].length() == 0 || replacementList[i] == null) {
+                        searchList[i].isEmpty() || replacementList[i] == null) {
                     continue;
                 }
                 tempIndex = text.indexOf(searchList[i], start);
@@ -5058,11 +5071,10 @@ public class StringUtils {
     public static String repeat(final String str, final String separator, final int repeat) {
         if(str == null || separator == null) {
             return repeat(str, repeat);
-        } else {
-            // given that repeat(String, int) is quite optimized, better to rely on it than try and splice this into it
-            final String result = repeat(str + separator, repeat);
-            return removeEnd(result, separator);
         }
+        // given that repeat(String, int) is quite optimized, better to rely on it than try and splice this into it
+        final String result = repeat(str + separator, repeat);
+        return removeEnd(result, separator);
     }
 
     /**
@@ -5569,8 +5581,15 @@ public class StringUtils {
         if (str == null || (strLen = str.length()) == 0) {
             return str;
         }
+        
+        char firstChar = str.charAt(0);
+        if (Character.isTitleCase(firstChar)) {
+        	// already capitalized
+        	return str;
+        }
+        
         return new StringBuilder(strLen)
-            .append(Character.toTitleCase(str.charAt(0)))
+            .append(Character.toTitleCase(firstChar))
             .append(str.substring(1))
             .toString();
     }
@@ -5600,8 +5619,15 @@ public class StringUtils {
         if (str == null || (strLen = str.length()) == 0) {
             return str;
         }
+        
+        char firstChar = str.charAt(0);
+        if (Character.isLowerCase(firstChar)) {
+        	// already uncapitalized
+        	return str;
+        }
+        
         return new StringBuilder(strLen)
-            .append(Character.toLowerCase(str.charAt(0)))
+            .append(Character.toLowerCase(firstChar))
             .append(str.substring(1))
             .toString();
     }
@@ -6839,9 +6865,8 @@ public class StringUtils {
         // distance
         if (p[n] <= threshold) {
             return p[n];
-        } else {
-            return -1;
         }
+        return -1;
     }
 
     // startsWith
