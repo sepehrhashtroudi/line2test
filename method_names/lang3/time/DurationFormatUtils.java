@@ -1,3 +1,6 @@
+public DurationFormatUtils()
+ Token(final Object value)
+ Token(final Object value, final int count)
 public static String formatDurationHMS(final long durationMillis)
 public static String formatDurationISO(final long durationMillis)
 public static String formatDuration(final long durationMillis, final String format)

@@ -1,5 +1,5 @@
-Null
-ObjectUtils
+public ObjectUtils()
+ Null()
 public static T defaultIfNull(final T object, final T defaultValue)
 public static T firstNonNull(final T... values)
 public static boolean equals(final Object object1, final Object object2)

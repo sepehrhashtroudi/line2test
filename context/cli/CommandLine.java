@@ -16,5 +16,6 @@ public List getArgList()
  void addOption(Option opt)
 public Iterator iterator()
 public Option[] getOptions()
+ CommandLine()
 List args=Optional[new LinkedList()]
 Set options=Optional[new HashSet()]

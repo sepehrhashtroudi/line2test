@@ -1,4 +1,4 @@
-TypeUtils
+public TypeUtils()
 public static boolean isAssignable(final Type type, final Type toType)
 private static boolean isAssignable(final Type type, final Type toType, final Map<TypeVariable<?>, Type> typeVarAssigns)
 private static boolean isAssignable(final Type type, final Class<?> toClass)

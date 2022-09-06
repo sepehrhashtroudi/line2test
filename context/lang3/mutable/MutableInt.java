@@ -1,4 +1,7 @@
-MutableInt
+public MutableInt()
+public MutableInt(final int value)
+public MutableInt(final Number value)
+public MutableInt(final String value) throws NumberFormatException
 public Integer getValue()
 public void setValue(final int value)
 public void setValue(final Number value)

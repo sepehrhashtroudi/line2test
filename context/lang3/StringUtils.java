@@ -1,4 +1,4 @@
-StringUtils
+public StringUtils()
 public static boolean isEmpty(final CharSequence cs)
 public static boolean isNotEmpty(final CharSequence cs)
 public static boolean isBlank(final CharSequence cs)

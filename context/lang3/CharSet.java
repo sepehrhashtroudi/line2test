@@ -1,4 +1,4 @@
-CharSet
+protected CharSet(final String... set)
 public static CharSet getInstance(final String... setStrs)
 protected void add(final String str)
  CharRange[] getCharRanges()

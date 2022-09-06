@@ -1,4 +1,4 @@
-FastDateFormat
+protected FastDateFormat(final String pattern, final TimeZone timeZone, final Locale locale)
 protected FastDateFormat createInstance(final String pattern, final TimeZone timeZone, final Locale locale)
 public static FastDateFormat getInstance()
 public static FastDateFormat getInstance(final String pattern)

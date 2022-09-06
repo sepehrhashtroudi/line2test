@@ -15,3 +15,4 @@ void addArg(String arg) { [EOL]     args.add(arg); [EOL] } <line_num>: 275
 void addOption(Option opt) { [EOL]     options.add(opt); [EOL] } <line_num>: 286
 public Iterator iterator() { [EOL]     return options.iterator(); [EOL] } <line_num>: 297
 public Option[] getOptions() { [EOL]     Collection processed = options; [EOL]     Option[] optionsArray = new Option[processed.size()]; [EOL]     return (Option[]) processed.toArray(optionsArray); [EOL] } <line_num>: 307
+CommandLine() { [EOL] } <line_num>: 54

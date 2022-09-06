@@ -1,3 +1,5 @@
+private CharRange(char start, char end, final boolean negated)
+private CharacterIterator(final CharRange r)
 public static CharRange is(final char ch)
 public static CharRange isNot(final char ch)
 public static CharRange isIn(final char start, final char end)

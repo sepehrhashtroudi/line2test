@@ -1,4 +1,7 @@
-ExtendedMessageFormat
+public ExtendedMessageFormat(final String pattern)
+public ExtendedMessageFormat(final String pattern, final Locale locale)
+public ExtendedMessageFormat(final String pattern, final Map<String, ? extends FormatFactory> registry)
+public ExtendedMessageFormat(final String pattern, final Locale locale, final Map<String, ? extends FormatFactory> registry)
 public String toPattern()
 public final void applyPattern(final String pattern)
 public void setFormat(final int formatElementIndex, final Format newFormat)

@@ -1,4 +1,7 @@
-MutableLong
+public MutableLong()
+public MutableLong(final long value)
+public MutableLong(final Number value)
+public MutableLong(final String value) throws NumberFormatException
 public Long getValue()
 public void setValue(final long value)
 public void setValue(final Number value)

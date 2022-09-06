@@ -1,3 +1,4 @@
+public FieldUtils()
 public static Field getField(final Class<?> cls, final String fieldName)
 public static Field getField(final Class<?> cls, final String fieldName, final boolean forceAccess)
 public static Field getDeclaredField(final Class<?> cls, final String fieldName)

@@ -1,3 +1,4 @@
+private Fraction(final int numerator, final int denominator)
 public static Fraction getFraction(int numerator, int denominator)
 public static Fraction getFraction(final int whole, final int numerator, final int denominator)
 public static Fraction getReducedFraction(int numerator, int denominator)

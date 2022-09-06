@@ -1,4 +1,4 @@
-CharUtils
+public CharUtils()
 public static Character toCharacterObject(final char ch)
 public static Character toCharacterObject(final String str)
 public static char toChar(final Character ch)

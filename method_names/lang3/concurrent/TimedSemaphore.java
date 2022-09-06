@@ -1,3 +1,5 @@
+public TimedSemaphore(final long timePeriod, final TimeUnit timeUnit, final int limit)
+public TimedSemaphore(final ScheduledExecutorService service, final long timePeriod, final TimeUnit timeUnit, final int limit)
 public final synchronized int getLimit()
 public final synchronized void setLimit(final int limit)
 public synchronized void shutdown()

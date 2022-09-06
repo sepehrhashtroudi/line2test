@@ -1,4 +1,4 @@
-CharSequenceUtils
+public CharSequenceUtils()
 public static CharSequence subSequence(final CharSequence cs, final int start)
  static int indexOf(final CharSequence cs, final int searchChar, int start)
  static int indexOf(final CharSequence cs, final CharSequence searchChar, final int start)

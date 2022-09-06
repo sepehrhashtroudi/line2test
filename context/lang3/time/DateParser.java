@@ -1,4 +1,3 @@
-DateParser
  Date parse(String source) throws ParseException
  Date parse(String source, ParsePosition pos)
  String getPattern()

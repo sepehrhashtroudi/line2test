@@ -1,3 +1,8 @@
+public ContextedRuntimeException()
+public ContextedRuntimeException(final String message)
+public ContextedRuntimeException(final Throwable cause)
+public ContextedRuntimeException(final String message, final Throwable cause)
+public ContextedRuntimeException(final String message, final Throwable cause, ExceptionContext context)
 public ContextedRuntimeException addContextValue(final String label, final Object value)
 public ContextedRuntimeException setContextValue(final String label, final Object value)
 public List<Object> getContextValues(final String label)

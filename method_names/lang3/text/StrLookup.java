@@ -1,3 +1,5 @@
+protected StrLookup()
+ MapStrLookup(final Map<String, V> map)
 public static StrLookup<?> noneLookup()
 public static StrLookup<String> systemPropertiesLookup()
 public static StrLookup<V> mapLookup(final Map<String, V> map)

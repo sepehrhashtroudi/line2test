@@ -1,5 +1,4 @@
-Builder
-BasicThreadFactory
+private BasicThreadFactory(final Builder builder)
 public final ThreadFactory getWrappedFactory()
 public final String getNamingPattern()
 public final Boolean getDaemonFlag()

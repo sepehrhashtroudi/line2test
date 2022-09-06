@@ -1,3 +1,4 @@
+public WordUtils()
 public static String wrap(final String str, final int wrapLength)
 public static String wrap(final String str, int wrapLength, String newLineStr, final boolean wrapLongWords)
 public static String capitalize(final String str)

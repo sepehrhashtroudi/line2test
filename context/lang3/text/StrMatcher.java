@@ -1,9 +1,9 @@
-CharSetMatcher
-CharMatcher
-StringMatcher
-NoMatcher
-TrimMatcher
-StrMatcher
+protected StrMatcher()
+ CharSetMatcher(final char[] chars)
+ CharMatcher(final char ch)
+ StringMatcher(final String str)
+ NoMatcher()
+ TrimMatcher()
 public static StrMatcher commaMatcher()
 public static StrMatcher tabMatcher()
 public static StrMatcher spaceMatcher()

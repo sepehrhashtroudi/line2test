@@ -1,3 +1,4 @@
+public AnnotationUtils()
 protected String getShortClassName(final java.lang.Class<?> cls)
 protected void appendDetail(final StringBuffer buffer, final String fieldName, Object value)
 public static boolean equals(final Annotation a1, final Annotation a2)

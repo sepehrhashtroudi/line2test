@@ -1,4 +1,4 @@
-ClassUtils
+public ClassUtils()
 private static void addAbbreviation(final String primitive, final String abbreviation)
 public static String getShortClassName(final Object object, final String valueIfNull)
 public static String getShortClassName(final Class<?> cls)

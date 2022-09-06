@@ -18,6 +18,7 @@ public static OptionBuilder withDescription(String newDescription)
 public static Option create(char opt) throws IllegalArgumentException
 public static Option create() throws IllegalArgumentException
 public static Option create(String opt) throws IllegalArgumentException
+private OptionBuilder()
 String longopt
 String description
 String argName

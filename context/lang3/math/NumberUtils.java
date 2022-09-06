@@ -1,4 +1,4 @@
-NumberUtils
+public NumberUtils()
 public static int toInt(final String str)
 public static int toInt(final String str, final int defaultValue)
 public static long toLong(final String str)

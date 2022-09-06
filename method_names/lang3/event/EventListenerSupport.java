@@ -1,3 +1,6 @@
+public EventListenerSupport(final Class<L> listenerInterface)
+public EventListenerSupport(final Class<L> listenerInterface, final ClassLoader classLoader)
+private EventListenerSupport()
 public static EventListenerSupport<T> create(final Class<T> listenerInterface)
 public L fire()
 public void addListener(final L listener)

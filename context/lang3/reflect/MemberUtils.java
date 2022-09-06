@@ -1,4 +1,3 @@
-MemberUtils
  static void setAccessibleWorkaround(final AccessibleObject o)
  static boolean isPackageAccess(final int modifiers)
  static boolean isAccessible(final Member m)

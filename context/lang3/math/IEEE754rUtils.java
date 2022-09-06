@@ -1,4 +1,3 @@
-IEEE754rUtils
 public static double min(final double[] array)
 public static float min(final float[] array)
 public static double min(final double a, final double b, final double c)

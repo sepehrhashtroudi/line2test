@@ -1,1 +1,2 @@
 MissingArgumentException
+public MissingArgumentException(String message)

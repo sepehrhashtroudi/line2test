@@ -1,7 +1,9 @@
-StrBuilderTokenizer
-StrBuilderReader
-StrBuilderWriter
-StrBuilder
+public StrBuilder()
+public StrBuilder(int initialCapacity)
+public StrBuilder(final String str)
+ StrBuilderTokenizer()
+ StrBuilderReader()
+ StrBuilderWriter()
 public String getNewLineText()
 public StrBuilder setNewLineText(final String newLine)
 public String getNullText()

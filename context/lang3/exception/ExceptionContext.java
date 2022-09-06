@@ -1,4 +1,3 @@
-ExceptionContext
 public ExceptionContext addContextValue(String label, Object value)
 public ExceptionContext setContextValue(String label, Object value)
 public List<Object> getContextValues(String label)

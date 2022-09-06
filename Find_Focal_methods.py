@@ -6,6 +6,10 @@ from sklearn.model_selection import train_test_split
 import copy
 import json 
 
+def text_preprocess (input):
+  input = input.strip().replace(str.encode(" "), str.encode("")).replace(str.encode("[EOL]"),str.encode(""))
+  input = input.split(str.encode("//"))[0]
+  return input
 src_path= "lang3/"
 method_names_path = "method_names/"
 methods_path = "methods/"
@@ -49,9 +53,11 @@ if __name__ == "__main__":
           if("Test" in line):
             print("test#########################################################")
           else:
+
             line_src_dict = {}
             path = line.split("/")[12:]
             class_name = line.split("/")[-1].split(".")[0]
+            # print("src" + str(path))
             # print(class_name)
             # print(path)
             f = open("/".join(path),'rb')
@@ -84,35 +90,50 @@ if __name__ == "__main__":
               method_line_num = method.split(str.encode("<line_num>:"))[1]
               methods2line[int(method_line_num)] = method
       if "<line>" in line: 
-        line_num = int(line.split(":")[1])-1
+        line_num = int(line.split(":")[1]) #real line num starts from 1
         src_line_num = line_num
-        src_line = src_code[line_num]
+        src_line = src_code[line_num-1] # in array we should subtrac 1 because its an array and start at zero
         nearest_func = 0
         diff = 50000
+        entered_loop_flag = 0
         function_found_flag = 0
+        if len(methods2line) == 0:
+          function_found_flag = 0
+          print("zero methods")
+          continue #if we dont have any methods in the file we continue until we get to the next file
+
         for key, value in methods2line.items():
+          # print("line "+ str(line_num))
+          # print("key"+str(key))
+          if text_preprocess(src_line) in text_preprocess(methods2line[key]):
+            function_found_flag = 2 #for debug
           if line_num >= key:
             if line_num - key < diff:
               diff = line_num - key
               nearest_func = key
-              if src_line.strip() in methods2line[nearest_func]:
-                function_found_flag = 1
+              entered_loop_flag = 1 
+              # if text_preprocess(src_line) in text_preprocess(methods2line[nearest_func]):
+              #   function_found_flag = 2
+              
+                
+          
+        if entered_loop_flag == 1:
+          if text_preprocess(src_line) in text_preprocess(methods2line[nearest_func]):
+            function_found_flag = 1
+
+
+
         
         # print("/".join(path))
         # f = open("src_lines.txt","ab")
-        if function_found_flag == 1:
+        if function_found_flag == 1 :
           line_plus_method = str.encode(" [LINE] ") + src_line.replace(str.encode("\n"), str.encode(" ")).strip() + str.encode(" [LINE] ") + methods2line[nearest_func].split(str.encode("<line_num>:"))[0]
-          
-          # f.write(str.encode(" [LINE] ") + src_line.replace(str.encode("\n"), str.encode(" ")).strip() + str.encode(" [LINE] ") + methods2line[nearest_func].split(str.encode("<line_num>:"))[0] + str.encode("\n"))
-          # X.append(str.encode(" [LINE] ") + src_line.replace(str.encode("\n"), str.encode(" ")).strip() + str.encode(" [LINE] ") + methods2line[nearest_func].split(str.encode("<line_num>:"))[0] + str.encode("\n"))
-          # f = open("lines_covered.txt",'ab')
-          # f.write(str.encode(str(line_num+1) + "\n"))
-          # f.close()
-        else:
-          # print("method not found")
+        elif function_found_flag == 0 and entered_loop_flag == 1 :
+          if str.encode("@") not in src_line: #and str.encode("this") not in src_line\
+          #   and str.encode("super") not in src_line and str.encode(path[-1].split(".")[0]) not in src_line :
+            print("method not found")
           continue
-          # f.write(src_line )
-        # f.close()
+
 
 
 
@@ -153,7 +174,7 @@ if __name__ == "__main__":
               print(index)
               print("more than one test maped to one line")
               continue
-            line_src_dict[str(src_line_num+1)] = {"src": line_plus_method , "test":str.encode("@Test") + test.replace( str.encode("\n"), str.encode(" [EOL] ")),\
+            line_src_dict[str(src_line_num)] = {"src": line_plus_method , "test":str.encode("@Test") + test.replace( str.encode("\n"), str.encode(" [EOL] ")),\
             "test_path": str.encode("/".join(test_path)+".java")}
             dataset["/".join(path)] = line_src_dict 
             # f = open("tests.txt","ab")
@@ -167,12 +188,38 @@ if __name__ == "__main__":
           print("/".join(test_path)+".java")
 
     # print(dataset)
-    f = open("new_src.methods","wb")
+    f = open("covered_lines_new.txt","wb")
     for key,value in dataset.items():
       f.write(str.encode(key +  "\n"))
       for line, _ in value.items():
         f.write(str.encode(line +  "\n"))
     f.close()
+
+    i == 0
+    f = open("lines_not_covered_in_evosuite_new.txt","wb")
+    with open('lines_covered_evosuite.json', 'r') as j:
+      jsonObject = json.load(j)
+      jsonObject = json.loads(jsonObject)
+      for key,value in dataset.items():
+        f.write(str.encode(key +  "\n"))
+        if key in jsonObject.keys():
+          file_coverage_evo = jsonObject[key]
+          # print(file_coverage_evo)
+          for line, _ in value.items():
+            # print(line)
+            if line not in file_coverage_evo:
+              # print(line)
+              f.write(str.encode(line +  "\n"))
+              # print("covered")
+              # i+=1
+              # print(i)
+        else:
+          print(key)
+          for line, _ in value.items():
+            f.write(str.encode(line +  "\n"))
+
+    f.close()
+
     # out = json.dumps(dataset)
     # with open('dataset.json', 'w') as f:
     #   json.dump(out, f)

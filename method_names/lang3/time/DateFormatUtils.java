@@ -1,3 +1,4 @@
+public DateFormatUtils()
 public static String formatUTC(final long millis, final String pattern)
 public static String formatUTC(final Date date, final String pattern)
 public static String formatUTC(final long millis, final String pattern, final Locale locale)

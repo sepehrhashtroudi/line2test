@@ -1,4 +1,4 @@
-CompareToBuilder
+public CompareToBuilder()
 public static int reflectionCompare(final Object lhs, final Object rhs)
 public static int reflectionCompare(final Object lhs, final Object rhs, final boolean compareTransients)
 public static int reflectionCompare(final Object lhs, final Object rhs, final Collection<String> excludeFields)

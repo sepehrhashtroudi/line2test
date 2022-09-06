@@ -1,4 +1,3 @@
-Triple
 public static Triple<L, M, R> of(final L left, final M middle, final R right)
 public abstract L getLeft()
 public abstract M getMiddle()

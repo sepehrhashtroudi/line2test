@@ -1,4 +1,3 @@
-Pair
 public static Pair<L, R> of(final L left, final R right)
 public abstract L getLeft()
 public abstract R getRight()

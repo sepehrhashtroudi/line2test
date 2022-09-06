@@ -1,5 +1,5 @@
-ConstantFuture
-ConcurrentUtils
+private ConcurrentUtils()
+ ConstantFuture(final T value)
 public static ConcurrentException extractCause(final ExecutionException ex)
 public static ConcurrentRuntimeException extractCauseUnchecked(final ExecutionException ex)
 public static void handleCause(final ExecutionException ex) throws ConcurrentException

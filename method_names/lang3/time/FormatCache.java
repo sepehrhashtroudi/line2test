@@ -1,3 +1,4 @@
+public MultipartKey(final Object... keys)
 public F getInstance()
 public F getInstance(final String pattern, TimeZone timeZone, Locale locale)
 protected abstract F createInstance(String pattern, TimeZone timeZone, Locale locale)

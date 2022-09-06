@@ -1,4 +1,6 @@
-MutableBoolean
+public MutableBoolean()
+public MutableBoolean(final boolean value)
+public MutableBoolean(final Boolean value)
 public Boolean getValue()
 public void setValue(final boolean value)
 public void setValue(final Boolean value)

@@ -1,4 +1,3 @@
-DatePrinter
  String format(long millis)
  String format(Date date)
  String format(Calendar calendar)

@@ -1,4 +1,7 @@
-MutableShort
+public MutableShort()
+public MutableShort(final short value)
+public MutableShort(final Number value)
+public MutableShort(final String value) throws NumberFormatException
 public Short getValue()
 public void setValue(final short value)
 public void setValue(final Number value)

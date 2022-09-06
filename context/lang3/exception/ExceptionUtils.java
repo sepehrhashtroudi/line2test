@@ -1,4 +1,4 @@
-ExceptionUtils
+public ExceptionUtils()
 public static String[] getDefaultCauseMethodNames()
 public static Throwable getCause(final Throwable throwable)
 public static Throwable getCause(final Throwable throwable, String[] methodNames)

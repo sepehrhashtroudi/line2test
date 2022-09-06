@@ -1,4 +1,8 @@
-ContextedException
+public ContextedException()
+public ContextedException(final String message)
+public ContextedException(final Throwable cause)
+public ContextedException(final String message, final Throwable cause)
+public ContextedException(final String message, final Throwable cause, ExceptionContext context)
 public ContextedException addContextValue(final String label, final Object value)
 public ContextedException setContextValue(final String label, final Object value)
 public List<Object> getContextValues(final String label)

@@ -1,3 +1,4 @@
+public EnumUtils()
 public static Map<String, E> getEnumMap(final Class<E> enumClass)
 public static List<E> getEnumList(final Class<E> enumClass)
 public static boolean isValidEnum(final Class<E> enumClass, final String enumName)

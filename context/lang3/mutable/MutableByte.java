@@ -1,4 +1,7 @@
-MutableByte
+public MutableByte()
+public MutableByte(final byte value)
+public MutableByte(final Number value)
+public MutableByte(final String value) throws NumberFormatException
 public Byte getValue()
 public void setValue(final byte value)
 public void setValue(final Number value)

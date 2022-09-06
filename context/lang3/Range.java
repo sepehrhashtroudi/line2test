@@ -1,4 +1,4 @@
-Range
+private Range(final T element1, final T element2, Comparator<T> comparator)
 public static Range<T> is(final T element)
 public static Range<T> is(final T element, final Comparator<T> comparator)
 public static Range<T> between(final T fromInclusive, final T toInclusive)

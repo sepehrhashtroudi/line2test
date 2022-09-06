@@ -1,4 +1,3 @@
-CharEncoding
 public static boolean isSupported(final String name)
 String ISO_8859_1=Optional["ISO-8859-1"]
 String US_ASCII=Optional["US-ASCII"]

@@ -1,4 +1,7 @@
-ReflectionToStringBuilder
+public ReflectionToStringBuilder(final Object object)
+public ReflectionToStringBuilder(final Object object, final ToStringStyle style)
+public ReflectionToStringBuilder(final Object object, final ToStringStyle style, final StringBuffer buffer)
+public ReflectionToStringBuilder(final T object, final ToStringStyle style, final StringBuffer buffer, final Class<? super T> reflectUpToClass, final boolean outputTransients, final boolean outputStatics)
 public static String toString(final Object object)
 public static String toString(final Object object, final ToStringStyle style)
 public static String toString(final Object object, final ToStringStyle style, final boolean outputTransients)

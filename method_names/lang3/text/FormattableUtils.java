@@ -1,3 +1,4 @@
+public FormattableUtils()
 public static String toString(final Formattable formattable)
 public static Formatter append(final CharSequence seq, final Formatter formatter, final int flags, final int width, final int precision)
 public static Formatter append(final CharSequence seq, final Formatter formatter, final int flags, final int width, final int precision, final char padChar)

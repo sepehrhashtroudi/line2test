@@ -1,3 +1,7 @@
+public MutableFloat()
+public MutableFloat(final float value)
+public MutableFloat(final Number value)
+public MutableFloat(final String value) throws NumberFormatException
 public Float getValue()
 public void setValue(final float value)
 public void setValue(final Number value)

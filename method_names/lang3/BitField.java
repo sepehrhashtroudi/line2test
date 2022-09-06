@@ -1,3 +1,4 @@
+public BitField(final int mask)
 public int getValue(final int holder)
 public short getShortValue(final short holder)
 public int getRawValue(final int holder)

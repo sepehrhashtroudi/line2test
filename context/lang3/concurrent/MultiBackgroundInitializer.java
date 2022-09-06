@@ -1,5 +1,6 @@
-MultiBackgroundInitializerResults
-MultiBackgroundInitializer
+public MultiBackgroundInitializer()
+public MultiBackgroundInitializer(final ExecutorService exec)
+private MultiBackgroundInitializerResults(final Map<String, BackgroundInitializer<?>> inits, final Map<String, Object> results, final Map<String, ConcurrentException> excepts)
 public void addInitializer(final String name, final BackgroundInitializer<?> init)
 protected int getTaskCount()
 protected MultiBackgroundInitializerResults initialize() throws Exception

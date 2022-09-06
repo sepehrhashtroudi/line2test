@@ -1,4 +1,3 @@
-Conversion
 public static int hexDigitToInt(final char hexDigit)
 public static int hexDigitMsb0ToInt(final char hexDigit)
 public static boolean[] hexDigitToBinary(final char hexDigit)

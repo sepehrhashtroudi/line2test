@@ -10,3 +10,4 @@ public Option getOption(String opt) { [EOL]     opt = Util.stripLeadingHyphens(o
 public boolean hasOption(String opt) { [EOL]     opt = Util.stripLeadingHyphens(opt); [EOL]     return shortOpts.containsKey(opt) || longOpts.containsKey(opt); [EOL] } <line_num>: 240
 public OptionGroup getOptionGroup(Option opt) { [EOL]     return (OptionGroup) optionGroups.get(opt.getKey()); [EOL] } <line_num>: 255
 public String toString() { [EOL]     StringBuffer buf = new StringBuffer(); [EOL]     buf.append("[ Options: [ short "); [EOL]     buf.append(shortOpts.toString()); [EOL]     buf.append(" ] [ long "); [EOL]     buf.append(longOpts); [EOL]     buf.append(" ]"); [EOL]     return buf.toString(); [EOL] } <line_num>: 265
+public Options() { [EOL] } <line_num>: 58

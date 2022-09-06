@@ -1,4 +1,6 @@
-ToStringBuilder
+public ToStringBuilder(final Object object)
+public ToStringBuilder(final Object object, final ToStringStyle style)
+public ToStringBuilder(final Object object, ToStringStyle style, StringBuffer buffer)
 public static ToStringStyle getDefaultStyle()
 public static void setDefaultStyle(final ToStringStyle style)
 public static String reflectionToString(final Object object)

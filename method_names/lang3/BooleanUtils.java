@@ -1,3 +1,4 @@
+public BooleanUtils()
 public static Boolean negate(final Boolean bool)
 public static boolean isTrue(final Boolean bool)
 public static boolean isNotTrue(final Boolean bool)

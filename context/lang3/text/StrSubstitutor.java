@@ -1,4 +1,10 @@
-StrSubstitutor
+public StrSubstitutor()
+public StrSubstitutor(final Map<String, V> valueMap)
+public StrSubstitutor(final Map<String, V> valueMap, final String prefix, final String suffix)
+public StrSubstitutor(final Map<String, V> valueMap, final String prefix, final String suffix, final char escape)
+public StrSubstitutor(final StrLookup<?> variableResolver)
+public StrSubstitutor(final StrLookup<?> variableResolver, final String prefix, final String suffix, final char escape)
+public StrSubstitutor(final StrLookup<?> variableResolver, final StrMatcher prefixMatcher, final StrMatcher suffixMatcher, final char escape)
 public static String replace(final Object source, final Map<String, V> valueMap)
 public static String replace(final Object source, final Map<String, V> valueMap, final String prefix, final String suffix)
 public static String replace(final Object source, final Properties valueProperties)

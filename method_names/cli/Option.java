@@ -34,3 +34,6 @@ public String toString()
 private boolean hasNoValues()
 public boolean equals(Object o)
 public int hashCode()
+public Option(String opt, String description) throws IllegalArgumentException
+public Option(String opt, boolean hasArg, String description) throws IllegalArgumentException
+public Option(String opt, String longOpt, boolean hasArg, String description) throws IllegalArgumentException

@@ -1,4 +1,4 @@
-EqualsBuilder
+public EqualsBuilder()
  static Set<Pair<IDKey, IDKey>> getRegistry()
  static Pair<IDKey, IDKey> getRegisterPair(final Object lhs, final Object rhs)
  static boolean isRegistered(final Object lhs, final Object rhs)

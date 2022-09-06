@@ -1,5 +1,6 @@
-InitializationTask
-BackgroundInitializer
+protected BackgroundInitializer()
+protected BackgroundInitializer(final ExecutorService exec)
+public InitializationTask(final ExecutorService exec)
 public final synchronized ExecutorService getExternalExecutor()
 public synchronized boolean isStarted()
 public final synchronized void setExternalExecutor(final ExecutorService externalExecutor)
