@@ -1,0 +1,237 @@
+@Test 
+     public void testLang8201158() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testLang8201160() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testLang8201161() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testLang8201162() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testLang8201163() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testIsAssignable1164() throws SecurityException, NoSuchMethodException, 
+             NoSuchFieldException { 
+         List list0 = null; 
+         List<Object> list1 = null; 
+         List<?> list2 = null; 
+         List<? super Object> list3 = null; 
+         List<String> list4 = null; 
+         List<? extends String> list5 = null; 
+         List<? super String> list6 = null; 
+         List[] list7 = null; 
+         List<Object>[] list8 = null; 
+         List<?>[] list9 = null; 
+         List<? super Object>[] list10 = null; 
+         List<String>[] list11 = null; 
+         List<? extends String>[] list12 = null; 
+         List<? super String>[] list13; 
+         final Class<?> clazz = getClass(); 
+         final Method method = clazz.getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); [E
+@Test 
+     public void testIsAssignable1165() throws SecurityException, NoSuchMethodException, 
+             NoSuchFieldException { 
+         List list0 = null; 
+         List<Object> list1 = null; 
+         List<?> list2 = null; 
+         List<? super Object> list3 = null; 
+         List<String> list4 = null; 
+         List<? extends String> list5 = null; 
+         List<? super String> list6 = null; 
+         List[] list7 = null; 
+         List<Object>[] list8 = null; 
+         List<?>[] list9 = null; 
+         List<? super Object>[] list10 = null; 
+         List<String>[] list11 = null; 
+         List<? extends String>[] list12 = null; 
+         List<? super String>[] list13; 
+         final Class<?> clazz = getClass(); 
+         final Method method = clazz.getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); [E

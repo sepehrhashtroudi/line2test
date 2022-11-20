@@ -1,0 +1,143 @@
+@Test 
+     public void testObjectArray707() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray709() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray710() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray711() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray712() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray713() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray714() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray715() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray716() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray717() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray718() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray719() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testObjectArray720() { 
+         Object[] array = new Object[] {null, base, new int[] {3, 6}}; 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{<null>,5,{3,6}}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+

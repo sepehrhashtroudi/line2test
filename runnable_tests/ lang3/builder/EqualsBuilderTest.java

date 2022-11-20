@@ -1,0 +1,417 @@
+@Test 
+     public void testLang88212() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88213() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88214() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88215() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88216() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88217() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88218() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88219() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88220() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88221() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88222() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88223() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88224() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testLang88225() throws IOException { 
+         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer("one"), new StringBuffer("two") } }); 
+         final StringWriter out = new StringWriter(); 
+         final int result = lt.translate(new StringBuffer("one"), 0, out); 
+         assertEquals("Incorrect codepoint consumption", 3, result); 
+         assertEquals("Incorrect value", "two", out.toString()); 
+     } 
+  
+ } 
+
+@Test 
+     public void testConstructor26() { 
+         assertNotNull(new Validate()); 
+         final Constructor<?>[] cons = Validate.class.getDeclaredConstructors(); 
+         assertEquals(1, cons.length); 
+         assertTrue(Modifier.isPublic(cons[0].getModifiers())); 
+         assertTrue(Modifier.isPublic(Validate.class.getModifiers())); 
+         assertFalse(Modifier.isFinal(Validate.class.getModifiers())); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testConstructor27() { 
+         assertNotNull(new Validate()); 
+         final Constructor<?>[] cons = Validate.class.getDeclaredConstructors(); 
+         assertEquals(1, cons.length); 
+         assertTrue(Modifier.isPublic(cons[0].getModifiers())); 
+         assertTrue(Modifier.isPublic(Validate.class.getModifiers())); 
+         assertFalse(Modifier.isFinal(Validate.class.getModifiers())); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue428() { 
+         Validate.isTrue(true, "MSG", 7); 
+         try { 
+             Validate.isTrue(false, "MSG", 7); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue429() { 
+         Validate.isTrue(true, "MSG", 7); 
+         try { 
+             Validate.isTrue(false, "MSG", 7); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue430() { 
+         Validate.isTrue(true, "MSG", 7); 
+         try { 
+             Validate.isTrue(false, "MSG", 7); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue531() { 
+         Validate.isTrue(true, "MSG", 7.4d); 
+         try { 
+             Validate.isTrue(false, "MSG", 7.4d); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue532() { 
+         Validate.isTrue(true, "MSG", 7.4d); 
+         try { 
+             Validate.isTrue(false, "MSG", 7.4d); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue533() { 
+         Validate.isTrue(true, "MSG", 7.4d); 
+         try { 
+             Validate.isTrue(false, "MSG", 7.4d); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue234() { 
+         Validate.isTrue(true, "MSG"); 
+         try { 
+             Validate.isTrue(false, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue235() { 
+         Validate.isTrue(true, "MSG"); 
+         try { 
+             Validate.isTrue(false, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue236() { 
+         Validate.isTrue(true, "MSG"); 
+         try { 
+             Validate.isTrue(false, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue137() { 
+         Validate.isTrue(true); 
+         try { 
+             Validate.isTrue(false); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated expression is false", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue138() { 
+         Validate.isTrue(true); 
+         try { 
+             Validate.isTrue(false); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated expression is false", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testIsTrue139() { 
+         Validate.isTrue(true); 
+         try { 
+             Validate.isTrue(false); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated expression is false", ex.getMessage()); 
+         } 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNoNullElementsArray240() { 
+         String[] array = new String[] {"a", "b"}; 
+         Validate.noNullElements(array, "MSG"); 
+         try { 
+             Validate.noNullElements((Object[]) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated object is null", ex.getMessage()); 
+         } 
+         array[1] = null; 
+         try { 
+             Validate.noNullElements(array, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+          
+         array = new String[] {"a", "b"}; 
+         final String[] test = Validate.noNullElements(array, "Message"); 
+         assertSame(array, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNoNullElementsArray241() { 
+         String[] array = new String[] {"a", "b"}; 
+         Validate.noNullElements(array, "MSG"); 
+         try { 
+             Validate.noNullElements((Object[]) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated object is null", ex.getMessage()); 
+         } 
+         array[1] = null; 
+         try { 
+             Validate.noNullElements(array, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+          
+         array = new String[] {"a", "b"}; 
+         final String[] test = Validate.noNullElements(array, "Message"); 
+         assertSame(array, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNoNullElementsArray242() { 
+         String[] array = new String[] {"a", "b"}; 
+         Validate.noNullElements(array, "MSG"); 
+         try { 
+             Validate.noNullElements((Object[]) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated object is null", ex.getMessage()); 
+         } 
+         array[1] = null; 
+         try { 
+             Validate.noNullElements(array, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+          
+         array = new String[] {"a", "b"}; 
+         final String[] test = Validate.noNullElements(array, "Message"); 
+         assertSame(array, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+

@@ -1,0 +1,466 @@
+@Test 
+     public void testNotEmptyMap262() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map, "MSG"); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map, "Message"); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyMap263() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map, "MSG"); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map, "Message"); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyMap264() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map, "MSG"); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map, "Message"); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyMap265() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map, "MSG"); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map, "Message"); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyMap266() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map, "MSG"); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map, "Message"); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyMap267() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null, "MSG"); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map, "MSG"); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("MSG", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map, "MSG"); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map, "Message"); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyMap168() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated map is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated map is empty", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyMap169() { 
+         final Map<String, Integer> map = new HashMap<String, Integer>(); 
+         try { 
+             Validate.notEmpty((Map<?, ?>) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated map is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(map); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated map is empty", ex.getMessage()); 
+         } 
+         map.put("ll", Integer.valueOf(8)); 
+         Validate.notEmpty(map); 
+          
+         final Map<String, Integer> test = Validate.notEmpty(map); 
+         assertSame(map, test); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyString170() { 
+         Validate.notEmpty("hjl"); 
+         try { 
+             Validate.notEmpty((String) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(""); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+          
+         final String str = "Hi"; 
+         final String testStr = Validate.notEmpty(str); 
+         assertSame(str, testStr); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyString171() { 
+         Validate.notEmpty("hjl"); 
+         try { 
+             Validate.notEmpty((String) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(""); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+          
+         final String str = "Hi"; 
+         final String testStr = Validate.notEmpty(str); 
+         assertSame(str, testStr); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyString173() { 
+         Validate.notEmpty("hjl"); 
+         try { 
+             Validate.notEmpty((String) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(""); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+          
+         final String str = "Hi"; 
+         final String testStr = Validate.notEmpty(str); 
+         assertSame(str, testStr); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyString174() { 
+         Validate.notEmpty("hjl"); 
+         try { 
+             Validate.notEmpty((String) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(""); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+          
+         final String str = "Hi"; 
+         final String testStr = Validate.notEmpty(str); 
+         assertSame(str, testStr); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyString175() { 
+         Validate.notEmpty("hjl"); 
+         try { 
+             Validate.notEmpty((String) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(""); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+          
+         final String str = "Hi"; 
+         final String testStr = Validate.notEmpty(str); 
+         assertSame(str, testStr); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyString176() { 
+         Validate.notEmpty("hjl"); 
+         try { 
+             Validate.notEmpty((String) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(""); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+          
+         final String str = "Hi"; 
+         final String testStr = Validate.notEmpty(str); 
+         assertSame(str, testStr); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotEmptyString177() { 
+         Validate.notEmpty("hjl"); 
+         try { 
+             Validate.notEmpty((String) null); 
+             fail("Expecting NullPointerException"); 
+         } catch (final NullPointerException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+         try { 
+             Validate.notEmpty(""); 
+             fail("Expecting IllegalArgumentException"); 
+         } catch (final IllegalArgumentException ex) { 
+             assertEquals("The validated character sequence is empty", ex.getMessage()); 
+         } 
+          
+         final String str = "Hi"; 
+         final String testStr = Validate.notEmpty(str); 
+         assertSame(str, testStr); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotBlankMsgNotBlankStringWithWhitespacesShouldNotThrow78() { 
+         //given 
+         final String string = "  abc   "; 
+  
+         //when 
+         Validate.notBlank(string, "Message"); 
+  
+         //then should not throw 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotBlankMsgBlankStringWithWhitespacesShouldThrow79() { 
+         //given 
+         final String string = "    abc   "; 
+  
+         //when 
+         Validate.notBlank(string, "Message"); 
+  
+         //then should not throw 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotBlankMsgBlankStringWithWhitespacesShouldThrow80() { 
+         //given 
+         final String string = "    abc   "; 
+  
+         //when 
+         Validate.notBlank(string, "Message"); 
+  
+         //then should not throw 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testNotBlankMsgBlankStringWithWhitespacesShouldThrow81() { 
+         //given 
+         final String string = "    abc   "; 
+  
+         //when 
+         Validate.notBlank(string, "Message"); 
+  
+         //then should not throw 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testDateTimeISO1218(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testDateTimeISO1219(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testFormatCalendar1220() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         c.setTimeZone(TimeZone.getDefault()); 
+         final StringBuilder buffer = new StringBuilder (); 
+         final int year = c.get(Calendar.YEAR); 
+         final int month = c.get(Calendar.MONTH) + 1; 
+         final int day = c.get(Calendar.DAY_OF_MONTH); 
+         final int hour = c.get(Calendar.HOUR_OF_DAY); 
+         buffer.append (year); 
+         buffer.append(month); 
+         buffer.append(day); 
+         buffer.append(hour); 
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH", Locale.US)); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c

@@ -1,0 +1,74 @@
+@Test 
+     public void testIsArrayGenericTypes1181() throws Exception { 
+         final Method method = getClass().getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); 
+  
+         final Type[] types = method.getGenericParameterTypes(); 
+  
+         Assert.assertFalse(TypeUtils.isArrayType(types[0])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[1])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[2])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[3])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[4])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[5])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[6])); 
+         Assert.assertTrue(TypeUtils.isArrayType(types[7])); 
+         Assert.assertTrue(TypeUtils.isArrayType(types[8])); 
+         Assert.assertTrue(TypeUtils.isArrayType(types[9])); 
+
+@Test 
+     public void testIsArrayGenericTypes1182() throws Exception { 
+         final Method method = getClass().getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); 
+  
+         final Type[] types = method.getGenericParameterTypes(); 
+  
+         Assert.assertFalse(TypeUtils.isArrayType(types[0])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[1])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[2])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[3])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[4])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[5])); 
+         Assert.assertFalse(TypeUtils.isArrayType(types[6])); 
+         Assert.assertTrue(TypeUtils.isArrayType(types[7])); 
+         Assert.assertTrue(TypeUtils.isArrayType(types[8])); 
+         Assert.assertTrue(TypeUtils.isArrayType(types[9])); 
+
+@Test 
+     public void testGetArrayComponentType1183() throws Exception { 
+         final Method method = getClass().getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); 
+  
+         final Type[] types = method.getGenericParameterTypes(); 
+  
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[0])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[1])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[2])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[3])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[4])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[5])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[6])); 
+         Assert.assertEquals(types[0], TypeUtils.getArrayComponentType(types[7])); 
+         Assert.assertEquals(types[1], TypeUtils.getArrayComponentType(types[8])); 
+         Assert.assert
+@Test 
+     public void testGetArrayComponentType1184() throws Exception { 
+         final Method method = getClass().getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); 
+  
+         final Type[] types = method.getGenericParameterTypes(); 
+  
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[0])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[1])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[2])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[3])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[4])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[5])); 
+         Assert.assertNull(TypeUtils.getArrayComponentType(types[6])); 
+         Assert.assertEquals(types[0], TypeUtils.getArrayComponentType(types[7])); 
+         Assert.assertEquals(types[1], TypeUtils.getArrayComponentType(types[8])); 
+         Assert.assert

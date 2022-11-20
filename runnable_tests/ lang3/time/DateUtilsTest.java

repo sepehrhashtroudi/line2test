@@ -1,0 +1,361 @@
+@Test 
+     public void testLang8201157() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testLang8201159() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testIsAssignable1166() throws SecurityException, NoSuchMethodException, 
+             NoSuchFieldException { 
+         List list0 = null; 
+         List<Object> list1 = null; 
+         List<?> list2 = null; 
+         List<? super Object> list3 = null; 
+         List<String> list4 = null; 
+         List<? extends String> list5 = null; 
+         List<? super String> list6 = null; 
+         List[] list7 = null; 
+         List<Object>[] list8 = null; 
+         List<?>[] list9 = null; 
+         List<? super Object>[] list10 = null; 
+         List<String>[] list11 = null; 
+         List<? extends String>[] list12 = null; 
+         List<? super String>[] list13; 
+         final Class<?> clazz = getClass(); 
+         final Method method = clazz.getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); [E
+@Test 
+     public void testIsAssignable1167() throws SecurityException, NoSuchMethodException, 
+             NoSuchFieldException { 
+         List list0 = null; 
+         List<Object> list1 = null; 
+         List<?> list2 = null; 
+         List<? super Object> list3 = null; 
+         List<String> list4 = null; 
+         List<? extends String> list5 = null; 
+         List<? super String> list6 = null; 
+         List[] list7 = null; 
+         List<Object>[] list8 = null; 
+         List<?>[] list9 = null; 
+         List<? super Object>[] list10 = null; 
+         List<String>[] list11 = null; 
+         List<? extends String>[] list12 = null; 
+         List<? super String>[] list13; 
+         final Class<?> clazz = getClass(); 
+         final Method method = clazz.getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); [E
+@Test 
+     public void testIsAssignable1168() throws SecurityException, NoSuchMethodException, 
+             NoSuchFieldException { 
+         List list0 = null; 
+         List<Object> list1 = null; 
+         List<?> list2 = null; 
+         List<? super Object> list3 = null; 
+         List<String> list4 = null; 
+         List<? extends String> list5 = null; 
+         List<? super String> list6 = null; 
+         List[] list7 = null; 
+         List<Object>[] list8 = null; 
+         List<?>[] list9 = null; 
+         List<? super Object>[] list10 = null; 
+         List<String>[] list11 = null; 
+         List<? extends String>[] list12 = null; 
+         List<? super String>[] list13; 
+         final Class<?> clazz = getClass(); 
+         final Method method = clazz.getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); [E
+@Test 
+     public void testIsAssignable1169() throws SecurityException, NoSuchMethodException, 
+             NoSuchFieldException { 
+         List list0 = null; 
+         List<Object> list1 = null; 
+         List<?> list2 = null; 
+         List<? super Object> list3 = null; 
+         List<String> list4 = null; 
+         List<? extends String> list5 = null; 
+         List<? super String> list6 = null; 
+         List[] list7 = null; 
+         List<Object>[] list8 = null; 
+         List<?>[] list9 = null; 
+         List<? super Object>[] list10 = null; 
+         List<String>[] list11 = null; 
+         List<? extends String>[] list12 = null; 
+         List<? super String>[] list13; 
+         final Class<?> clazz = getClass(); 
+         final Method method = clazz.getMethod("dummyMethod", List.class, List.class, List.class, 
+                 List.class, List.class, List.class, List.class, List[].class, List[].class, 
+                 List[].class, List[].class, List[].class, List[].class, List[].class); [E
+@Test 
+     public void testGetTypeArguments1170() { 
+         Map<TypeVariable<?>, Type> typeVarAssigns; 
+         TypeVariable<?> treeSetTypeVar; 
+         Type typeArg; 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(Integer.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from Integer: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+         Assert.assertEquals("Type argument of Comparable from Integer: " + typeArg, Integer.class, 
+                 typeVarAssigns.get(treeSetTypeVar)); 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(int.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from int: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+       
+@Test 
+     public void testGetTypeArguments1171() { 
+         Map<TypeVariable<?>, Type> typeVarAssigns; 
+         TypeVariable<?> treeSetTypeVar; 
+         Type typeArg; 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(Integer.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from Integer: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+         Assert.assertEquals("Type argument of Comparable from Integer: " + typeArg, Integer.class, 
+                 typeVarAssigns.get(treeSetTypeVar)); 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(int.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from int: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+       
+@Test 
+     public void testGetTypeArguments1172() { 
+         Map<TypeVariable<?>, Type> typeVarAssigns; 
+         TypeVariable<?> treeSetTypeVar; 
+         Type typeArg; 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(Integer.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from Integer: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+         Assert.assertEquals("Type argument of Comparable from Integer: " + typeArg, Integer.class, 
+                 typeVarAssigns.get(treeSetTypeVar)); 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(int.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from int: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+       
+@Test 
+     public void testGetTypeArguments1173() { 
+         Map<TypeVariable<?>, Type> typeVarAssigns; 
+         TypeVariable<?> treeSetTypeVar; 
+         Type typeArg; 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(Integer.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from Integer: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+         Assert.assertEquals("Type argument of Comparable from Integer: " + typeArg, Integer.class, 
+                 typeVarAssigns.get(treeSetTypeVar)); 
+  
+         typeVarAssigns = TypeUtils.getTypeArguments(int.class, Comparable.class); 
+         treeSetTypeVar = Comparable.class.getTypeParameters()[0]; 
+         Assert.assertTrue("Type var assigns for Comparable from int: " + typeVarAssigns, 
+                 typeVarAssigns.containsKey(treeSetTypeVar)); 
+         typeArg = typeVarAssigns.get(treeSetTypeVar); 
+       
+@Test 
+     public void testGetRawType1174() throws SecurityException, NoSuchFieldException { 
+         final Type stringParentFieldType = GenericTypeHolder.class.getDeclaredField("stringParent") 
+                 .getGenericType(); 
+         final Type integerParentFieldType = GenericTypeHolder.class.getDeclaredField("integerParent") 
+                 .getGenericType(); 
+         final Type foosFieldType = GenericTypeHolder.class.getDeclaredField("foos").getGenericType(); 
+         final Type genericParentT = GenericParent.class.getTypeParameters()[0]; 
+         Assert.assertEquals(GenericParent.class, TypeUtils.getRawType(stringParentFieldType, null)); 
+         Assert 
+                 .assertEquals(GenericParent.class, TypeUtils.getRawType(integerParentFieldType, 
+                         null)); 
+         Assert.assertEquals(List.class, TypeUtils.getRawType(foosFieldType, null)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 StringParameterizedChild.class)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 stringParentFieldType));
+@Test 
+     public void testGetRawType1175() throws SecurityException, NoSuchFieldException { 
+         final Type stringParentFieldType = GenericTypeHolder.class.getDeclaredField("stringParent") 
+                 .getGenericType(); 
+         final Type integerParentFieldType = GenericTypeHolder.class.getDeclaredField("integerParent") 
+                 .getGenericType(); 
+         final Type foosFieldType = GenericTypeHolder.class.getDeclaredField("foos").getGenericType(); 
+         final Type genericParentT = GenericParent.class.getTypeParameters()[0]; 
+         Assert.assertEquals(GenericParent.class, TypeUtils.getRawType(stringParentFieldType, null)); 
+         Assert 
+                 .assertEquals(GenericParent.class, TypeUtils.getRawType(integerParentFieldType, 
+                         null)); 
+         Assert.assertEquals(List.class, TypeUtils.getRawType(foosFieldType, null)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 StringParameterizedChild.class)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 stringParentFieldType));
+@Test 
+     public void testGetRawType1176() throws SecurityException, NoSuchFieldException { 
+         final Type stringParentFieldType = GenericTypeHolder.class.getDeclaredField("stringParent") 
+                 .getGenericType(); 
+         final Type integerParentFieldType = GenericTypeHolder.class.getDeclaredField("integerParent") 
+                 .getGenericType(); 
+         final Type foosFieldType = GenericTypeHolder.class.getDeclaredField("foos").getGenericType(); 
+         final Type genericParentT = GenericParent.class.getTypeParameters()[0]; 
+         Assert.assertEquals(GenericParent.class, TypeUtils.getRawType(stringParentFieldType, null)); 
+         Assert 
+                 .assertEquals(GenericParent.class, TypeUtils.getRawType(integerParentFieldType, 
+                         null)); 
+         Assert.assertEquals(List.class, TypeUtils.getRawType(foosFieldType, null)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 StringParameterizedChild.class)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 stringParentFieldType));
+@Test 
+     public void testGetRawType1177() throws SecurityException, NoSuchFieldException { 
+         final Type stringParentFieldType = GenericTypeHolder.class.getDeclaredField("stringParent") 
+                 .getGenericType(); 
+         final Type integerParentFieldType = GenericTypeHolder.class.getDeclaredField("integerParent") 
+                 .getGenericType(); 
+         final Type foosFieldType = GenericTypeHolder.class.getDeclaredField("foos").getGenericType(); 
+         final Type genericParentT = GenericParent.class.getTypeParameters()[0]; 
+         Assert.assertEquals(GenericParent.class, TypeUtils.getRawType(stringParentFieldType, null)); 
+         Assert 
+                 .assertEquals(GenericParent.class, TypeUtils.getRawType(integerParentFieldType, 
+                         null)); 
+         Assert.assertEquals(List.class, TypeUtils.getRawType(foosFieldType, null)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 StringParameterizedChild.class)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 stringParentFieldType));
+@Test 
+     public void testGetRawType1178() throws SecurityException, NoSuchFieldException { 
+         final Type stringParentFieldType = GenericTypeHolder.class.getDeclaredField("stringParent") 
+                 .getGenericType(); 
+         final Type integerParentFieldType = GenericTypeHolder.class.getDeclaredField("integerParent") 
+                 .getGenericType(); 
+         final Type foosFieldType = GenericTypeHolder.class.getDeclaredField("foos").getGenericType(); 
+         final Type genericParentT = GenericParent.class.getTypeParameters()[0]; 
+         Assert.assertEquals(GenericParent.class, TypeUtils.getRawType(stringParentFieldType, null)); 
+         Assert 
+                 .assertEquals(GenericParent.class, TypeUtils.getRawType(integerParentFieldType, 
+                         null)); 
+         Assert.assertEquals(List.class, TypeUtils.getRawType(foosFieldType, null)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 StringParameterizedChild.class)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 stringParentFieldType));
+@Test 
+     public void testGetRawType1179() throws SecurityException, NoSuchFieldException { 
+         final Type stringParentFieldType = GenericTypeHolder.class.getDeclaredField("stringParent") 
+                 .getGenericType(); 
+         final Type integerParentFieldType = GenericTypeHolder.class.getDeclaredField("integerParent") 
+                 .getGenericType(); 
+         final Type foosFieldType = GenericTypeHolder.class.getDeclaredField("foos").getGenericType(); 
+         final Type genericParentT = GenericParent.class.getTypeParameters()[0]; 
+         Assert.assertEquals(GenericParent.class, TypeUtils.getRawType(stringParentFieldType, null)); 
+         Assert 
+                 .assertEquals(GenericParent.class, TypeUtils.getRawType(integerParentFieldType, 
+                         null)); 
+         Assert.assertEquals(List.class, TypeUtils.getRawType(foosFieldType, null)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 StringParameterizedChild.class)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 stringParentFieldType));
+@Test 
+     public void testGetRawType1180() throws SecurityException, NoSuchFieldException { 
+         final Type stringParentFieldType = GenericTypeHolder.class.getDeclaredField("stringParent") 
+                 .getGenericType(); 
+         final Type integerParentFieldType = GenericTypeHolder.class.getDeclaredField("integerParent") 
+                 .getGenericType(); 
+         final Type foosFieldType = GenericTypeHolder.class.getDeclaredField("foos").getGenericType(); 
+         final Type genericParentT = GenericParent.class.getTypeParameters()[0]; 
+         Assert.assertEquals(GenericParent.class, TypeUtils.getRawType(stringParentFieldType, null)); 
+         Assert 
+                 .assertEquals(GenericParent.class, TypeUtils.getRawType(integerParentFieldType, 
+                         null)); 
+         Assert.assertEquals(List.class, TypeUtils.getRawType(foosFieldType, null)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 StringParameterizedChild.class)); 
+         Assert.assertEquals(String.class, TypeUtils.getRawType(genericParentT, 
+                 stringParentFieldType));

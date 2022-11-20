@@ -1,0 +1,343 @@
+@Test 
+     public void testIsWithCompare1473(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+
+@Test 
+     public void testIsWithCompare1474(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+
+@Test 
+     public void testIsWithCompare1475(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1476() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1477() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1478() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1479() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1480() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1481() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1482() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1483() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1484() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1485() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1486() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1487() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1488() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1489() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testGetMinimum1490() { 
+         assertEquals(10, (int) intRange.getMinimum()); 
+         assertEquals(10L, (long) longRange.getMinimum()); 
+         assertEquals(10f, floatRange.getMinimum(), 0.00001f); 
+         assertEquals(10d, doubleRange.getMinimum(), 0.00001d); 
+     } 
+  
+
+@Test 
+     public void testGetMinimum1491() { 
+         assertEquals(10, (int) intRange.getMinimum()); 
+         assertEquals(10L, (long) longRange.getMinimum()); 
+         assertEquals(10f, floatRange.getMinimum(), 0.00001f); 
+         assertEquals(10d, doubleRange.getMinimum(), 0.00001d); 
+     } 
+  
+
+@Test 
+     public void testGetMaximum1492() { 
+         assertEquals(20, (int) intRange.getMaximum()); 
+         assertEquals(20L, (long) longRange.getMaximum()); 
+         assertEquals(20f, floatRange.getMaximum(), 0.00001f); 
+         assertEquals(20d, doubleRange.getMaximum(), 0.00001d); 
+     } 
+  
+
+@Test 
+     public void testGetMaximum1493() { 
+         assertEquals(20, (int) intRange.getMaximum()); 
+         assertEquals(20L, (long) longRange.getMaximum()); 
+         assertEquals(20f, floatRange.getMaximum(), 0.00001f); 
+         assertEquals(20d, doubleRange.getMaximum(), 0.00001d); 
+     } 
+  
+
+@Test 
+     public void testIntersectionWith1494() { 
+         assertSame(intRange, intRange.intersectionWith(intRange)); 
+         assertSame(byteRange, byteRange.intersectionWith(byteRange)); 
+         assertSame(longRange, longRange.intersectionWith(longRange)); 
+         assertSame(floatRange, floatRange.intersectionWith(floatRange)); 
+         assertSame(doubleRange, doubleRange.intersectionWith(doubleRange)); 
+  
+         assertEquals(Range.between(10, 15), intRange.intersectionWith(Range.between(5, 15))); 
+     } 
+  
+

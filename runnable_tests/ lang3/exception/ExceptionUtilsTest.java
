@@ -1,0 +1,44 @@
+@Test 
+     public void testFloatArray919() { 
+         float[] array = new float[] {1.0f, 2.9876f, -3.00001f, 4.3f}; 
+         assertEquals(baseStr + "[{1.0,2.9876,-3.00001,4.3}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{1.0,2.9876,-3.00001,4.3}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testFloatArray920() { 
+         float[] array = new float[] {1.0f, 2.9876f, -3.00001f, 4.3f}; 
+         assertEquals(baseStr + "[{1.0,2.9876,-3.00001,4.3}]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[{1.0,2.9876,-3.00001,4.3}]", new ToStringBuilder(base).append((Object) array).toString()); 
+         array = null; 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append(array).toString()); 
+         assertEquals(baseStr + "[<null>]", new ToStringBuilder(base).append((Object) array).toString()); 
+     } 
+  
+
+@Test 
+     public void testReflectionFloatArrayArray921() { 
+         float[][] array = new float[][] { { 1.0f, 2.29686f }, null, { Float.NaN } }; 
+         final String baseStr = this.toBaseString(array); 
+         assertEquals(baseStr + "[{{1.0,2.29686},<null>,{NaN}}]", ToStringBuilder.reflectionToString(array)); 
+         array = null; 
+         assertReflectionArray("<null>", array); 
+     } 
+  
+  
+
+@Test 
+     public void testReflectionFloatArrayArray922() { 
+         float[][] array = new float[][] { { 1.0f, 2.29686f }, null, { Float.NaN } }; 
+         final String baseStr = this.toBaseString(array); 
+         assertEquals(baseStr + "[{{1.0,2.29686},<null>,{NaN}}]", ToStringBuilder.reflectionToString(array)); 
+         array = null; 
+         assertReflectionArray("<null>", array); 
+     } 
+  
+  
+

@@ -1,0 +1,230 @@
+@Test 
+     public void testNpeForNullElement353() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement354() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement355() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement356() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement357() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement358() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement359() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement360() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement361() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testNpeForNullElement362() { 
+         final Object[] x1 = new Object[] { Integer.valueOf(1), null, Integer.valueOf(3) }; 
+         final Object[] x2 = new Object[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3) }; 
+  
+         // causes an NPE in 2.0 according to: 
+         // http://issues.apache.org/bugzilla/show_bug.cgi?id=33067 
+         new EqualsBuilder().append(x1, x2); 
+     } 
+  
+
+@Test 
+     public void testLongArray363() { 
+         long[] obj1 = new long[2]; 
+         obj1[0] = 5L; 
+         obj1[1] = 6L; 
+         long[] obj2 = new long[2]; 
+         obj2[0] = 5L; 
+         obj2[1] = 6L; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testLongArray365() { 
+         long[] obj1 = new long[2]; 
+         obj1[0] = 5L; 
+         obj1[1] = 6L; 
+         long[] obj2 = new long[2]; 
+         obj2[0] = 5L; 
+         obj2[1] = 6L; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testIntArray367() { 
+         int[] obj1 = new int[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         int[] obj2 = new int[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testIntArray369() { 
+         int[] obj1 = new int[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         int[] obj2 = new int[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testIntArray370() { 
+         int[] obj1 = new int[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         int[] obj2 = new int[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testShortArray372() { 
+         short[] obj1 = new short[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         short[] obj2 = new short[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+

@@ -1,0 +1,830 @@
+@Test 
+     public void testConstructor547() { 
+         assertNotNull(new RandomStringUtils()); 
+         final Constructor<?>[] cons = RandomStringUtils.class.getDeclaredConstructors(); 
+         assertEquals(1, cons.length); 
+         assertTrue(Modifier.isPublic(cons[0].getModifiers())); 
+         assertTrue(Modifier.isPublic(RandomStringUtils.class.getModifiers())); 
+         assertFalse(Modifier.isFinal(RandomStringUtils.class.getModifiers())); 
+     } 
+      
+     //----------------------------------------------------------------------- 
+     /** 
+      * Test the implementation 
+      */ 
+
+@Test 
+     public void testExceptions548() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions549() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testRandomStringUtils550() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils551() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils552() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils553() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils554() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils555() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils556() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils557() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testExceptions558() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions559() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions560() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions561() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions562() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions563() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions564() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testRandomStringUtils565() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils566() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils567() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testExceptions568() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions569() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions570() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testExceptions571() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testRandomStringUtils572() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils573() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils574() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils575() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils576() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils577() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testExceptions578() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        
+@Test 
+     public void testRandomStringUtils579() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils580() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils581() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils582() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testRandomStringUtils583() { 
+         String r1 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r1.length()); 
+         String r2 = RandomStringUtils.random(50); 
+         assertEquals("random(50) length", 50, r2.length()); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+          
+         r1 = RandomStringUtils.randomAscii(50); 
+         assertEquals("randomAscii(50) length", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+             assertTrue("char between 32 and 127", r1.charAt(i) >= 32 && r1.charAt(i) <= 127); 
+         }         
+         r2 = RandomStringUtils.randomAscii(50); 
+         assertTrue("!r1.equals(r2)", !r1.equals(r2)); 
+  
+         r1 = RandomStringUtils.randomAlphabetic(50); 
+         assertEquals("randomAlphabetic(50)", 50, r1.length()); 
+         for(int i = 0; i < r1.length(); i++) { 
+          
+@Test 
+     public void testExceptions584() { 
+         final char[] DUMMY = new char[]{'a'}; // valid char array 
+         try { 
+             RandomStringUtils.random(-1); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, true, true); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, DUMMY); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+             RandomStringUtils.random(-1, ""); 
+             fail(); 
+         } catch (final IllegalArgumentException ex) {} 
+         try { 
+        

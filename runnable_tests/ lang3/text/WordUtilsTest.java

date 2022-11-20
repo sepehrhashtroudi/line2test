@@ -1,0 +1,78 @@
+@Test 
+     public void testLang8201155() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 
+@Test 
+     public void testLang8201156() throws Exception { 
+         final Type[] typeArray = {String.class, String.class}; 
+         final Type[] expectedArray = {String.class}; 
+         Assert.assertArrayEquals(expectedArray, TypeUtils.normalizeUpperBounds(typeArray)); 
+     } 
+  
+     public Iterable<? extends Map<Integer, ? extends Collection<?>>> iterable; 
+  
+     public static <G extends Comparable<G>> G stub() { 
+         return null; 
+     } 
+  
+     public static <G extends Comparable<? super G>> G stub2() { 
+         return null; 
+     } 
+  
+     public static <T extends Comparable<? extends T>> T stub3() { 
+         return null; 
+     } 
+ } 
+  
+ class AAClass<T> { 
+  
+     public class BBClass<S> { 
+     } 
+ } 
+  
+ class AAAClass extends AAClass<String> { 
+     public class BBBClass extends BBClass<String> { 
+     } 
+ } 
+  
+ @SuppressWarnings("rawtypes") 
+ //raw types, where used, are used purposely 
+ class AClass extends AAClass<String>.BBClass<Number> { 
+  
+     public AClass(final AAClass<String> enclosingInstance) { 
+ 

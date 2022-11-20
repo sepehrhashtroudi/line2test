@@ -1,0 +1,62 @@
+@Test 
+     public void testGetSet1316() { 
+         assertFalse(new MutableBoolean().booleanValue()); 
+         assertEquals(Boolean.FALSE, new MutableBoolean().getValue()); 
+          
+         final MutableBoolean mutBool = new MutableBoolean(false); 
+         assertEquals(Boolean.FALSE, mutBool.toBoolean()); 
+         assertFalse(mutBool.booleanValue()); 
+         assertTrue(mutBool.isFalse()); 
+         assertFalse(mutBool.isTrue()); 
+  
+         mutBool.setValue(Boolean.TRUE); 
+         assertEquals(Boolean.TRUE, mutBool.toBoolean()); 
+         assertTrue(mutBool.booleanValue()); 
+         assertFalse(mutBool.isFalse()); 
+         assertTrue(mutBool.isTrue()); 
+  
+         mutBool.setValue(false); 
+         assertFalse(mutBool.booleanValue()); 
+  
+         mutBool.setValue(true); 
+         assertTrue(mutBool.booleanValue()); 
+  
+     } 
+  
+
+@Test 
+     public void testEscapeCsvWriter1436() throws Exception { 
+         checkCsvEscapeWriter("foo.bar",        "foo.bar"); 
+         checkCsvEscapeWriter("\"foo,bar\"",    "foo,bar"); 
+         checkCsvEscapeWriter("\"foo\nbar\"",   "foo\nbar"); 
+         checkCsvEscapeWriter("\"foo\rbar\"",   "foo\rbar"); 
+         checkCsvEscapeWriter("\"foo\"\"bar\"", "foo\"bar"); 
+         checkCsvEscapeWriter("", null); 
+         checkCsvEscapeWriter("", ""); 
+     } 
+  
+     private void checkCsvEscapeWriter(final String expected, final String value) { 
+         try { 
+             final StringWriter writer = new StringWriter(); 
+             StringEscapeUtils.ESCAPE_CSV.translate(value, writer); 
+             assertEquals(expected, writer.toString()); 
+         } catch (final IOException e) { 
+             fail("Threw: " + e); 
+         } 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1437() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+

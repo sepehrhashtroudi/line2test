@@ -1,0 +1,156 @@
+@Test 
+     public void testShortArray373() { 
+         short[] obj1 = new short[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         short[] obj2 = new short[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testShortArray374() { 
+         short[] obj1 = new short[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         short[] obj2 = new short[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testCharArrayHiddenByObject375() { 
+         final char[] array1 = new char[2]; 
+         array1[0] = 5; 
+         array1[1] = 6; 
+         final char[] array2 = new char[2]; 
+         array2[0] = 5; 
+         array2[1] = 6; 
+         final Object obj1 = array1; 
+         final Object obj2 = array2; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array2).isEquals()); 
+         array1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testCharArrayHiddenByObject376() { 
+         final char[] array1 = new char[2]; 
+         array1[0] = 5; 
+         array1[1] = 6; 
+         final char[] array2 = new char[2]; 
+         array2[0] = 5; 
+         array2[1] = 6; 
+         final Object obj1 = array1; 
+         final Object obj2 = array2; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array2).isEquals()); 
+         array1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testCharArrayHiddenByObject377() { 
+         final char[] array1 = new char[2]; 
+         array1[0] = 5; 
+         array1[1] = 6; 
+         final char[] array2 = new char[2]; 
+         array2[0] = 5; 
+         array2[1] = 6; 
+         final Object obj1 = array1; 
+         final Object obj2 = array2; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array2).isEquals()); 
+         array1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testCharArrayHiddenByObject378() { 
+         final char[] array1 = new char[2]; 
+         array1[0] = 5; 
+         array1[1] = 6; 
+         final char[] array2 = new char[2]; 
+         array2[0] = 5; 
+         array2[1] = 6; 
+         final Object obj1 = array1; 
+         final Object obj2 = array2; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, array2).isEquals()); 
+         array1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testByteArray379() { 
+         byte[] obj1 = new byte[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         byte[] obj2 = new byte[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+
+@Test 
+     public void testByteArray380() { 
+         byte[] obj1 = new byte[2]; 
+         obj1[0] = 5; 
+         obj1[1] = 6; 
+         byte[] obj2 = new byte[2]; 
+         obj2[0] = 5; 
+         obj2[1] = 6; 
+         assertTrue(new EqualsBuilder().append(obj1, obj1).isEquals()); 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1[1] = 7; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+  
+         obj2 = null; 
+         assertTrue(!new EqualsBuilder().append(obj1, obj2).isEquals()); 
+         obj1 = null; 
+         assertTrue(new EqualsBuilder().append(obj1, obj2).isEquals()); 
+     } 
+  
+

@@ -1,0 +1,24 @@
+@Test 
+     public void testSetContentEnd1017() { 
+         final ToStringStyle style = new ToStringStyleImpl(); 
+         style.setContentEnd(null); 
+         assertEquals("", style.getContentEnd()); 
+     } 
+  
+
+@Test 
+     public void testSetContentEnd1018() { 
+         final ToStringStyle style = new ToStringStyleImpl(); 
+         style.setContentEnd(null); 
+         assertEquals("", style.getContentEnd()); 
+     } 
+  
+
+@Test 
+     public void testSetContentEnd1019() { 
+         final ToStringStyle style = new ToStringStyleImpl(); 
+         style.setContentEnd(null); 
+         assertEquals("", style.getContentEnd()); 
+     } 
+  
+

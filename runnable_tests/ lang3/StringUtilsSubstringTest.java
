@@ -1,0 +1,359 @@
+@Test 
+     public void testStopWatchSimple616(){ 
+         final StopWatch watch = new StopWatch(); 
+         watch.start(); 
+             try {Thread.sleep(550);} catch (final InterruptedException ex) {} 
+         watch.stop(); 
+         final long time = watch.getTime(); 
+         assertEquals(time, watch.getTime()); 
+          
+         assertTrue(time >= 500); 
+         assertTrue(time < 700); 
+          
+         watch.reset(); 
+         assertEquals(0, watch.getTime()); 
+     } 
+      
+
+@Test 
+     public void testStopWatchSimple617(){ 
+         final StopWatch watch = new StopWatch(); 
+         watch.start(); 
+             try {Thread.sleep(550);} catch (final InterruptedException ex) {} 
+         watch.stop(); 
+         final long time = watch.getTime(); 
+         assertEquals(time, watch.getTime()); 
+          
+         assertTrue(time >= 500); 
+         assertTrue(time < 700); 
+          
+         watch.reset(); 
+         assertEquals(0, watch.getTime()); 
+     } 
+      
+
+@Test 
+     public void testStopWatchSimple618(){ 
+         final StopWatch watch = new StopWatch(); 
+         watch.start(); 
+             try {Thread.sleep(550);} catch (final InterruptedException ex) {} 
+         watch.stop(); 
+         final long time = watch.getTime(); 
+         assertEquals(time, watch.getTime()); 
+          
+         assertTrue(time >= 500); 
+         assertTrue(time < 700); 
+          
+         watch.reset(); 
+         assertEquals(0, watch.getTime()); 
+     } 
+      
+
+@Test 
+     public void testBadStates619() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates620() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates621() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates622() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates623() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates624() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates625() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates626() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates627() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates628() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }
+@Test 
+     public void testBadStates629() { 
+         final StopWatch watch = new StopWatch(); 
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.stop(); 
+             fail("Calling stop on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.suspend(); 
+             fail("Calling suspend on an unstarted StopWatch should throw an exception. "); 
+         } catch(final IllegalStateException ise) { 
+             // expected 
+         } 
+  
+         try { 
+             watch.split(); 
+             fail("Calling split on a non-running StopWatch should throw an exception. "); 
+         }

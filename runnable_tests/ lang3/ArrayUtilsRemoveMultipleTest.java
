@@ -1,0 +1,585 @@
+@Test 
+     public void testUnescapeCsvString1438() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1439() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1440() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1441() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1442() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1443() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1444() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1445() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testConstructor1446() { 
+         assertNotNull(new StringEscapeUtils()); 
+         final Constructor<?>[] cons = StringEscapeUtils.class.getDeclaredConstructors(); 
+         assertEquals(1, cons.length); 
+         assertTrue(Modifier.isPublic(cons[0].getModifiers())); 
+         assertTrue(Modifier.isPublic(StringEscapeUtils.class.getModifiers())); 
+         assertFalse(Modifier.isFinal(StringEscapeUtils.class.getModifiers())); 
+     } 
+      
+
+@Test 
+     public void testConstructor1447() { 
+         assertNotNull(new StringEscapeUtils()); 
+         final Constructor<?>[] cons = StringEscapeUtils.class.getDeclaredConstructors(); 
+         assertEquals(1, cons.length); 
+         assertTrue(Modifier.isPublic(cons[0].getModifiers())); 
+         assertTrue(Modifier.isPublic(StringEscapeUtils.class.getModifiers())); 
+         assertFalse(Modifier.isFinal(StringEscapeUtils.class.getModifiers())); 
+     } 
+      
+
+@Test 
+     public void testEscapeJava1448() throws IOException { 
+         assertEquals(null, StringEscapeUtils.escapeJava(null)); 
+         try { 
+             StringEscapeUtils.ESCAPE_JAVA.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.ESCAPE_JAVA.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+          
+         assertEscapeJava("empty string", "", ""); 
+         assertEscapeJava(FOO, FOO); 
+         assertEscapeJava("tab", "\\t", "\t"); 
+         assertEscapeJava("backslash", "\\\\", "\\"); 
+         assertEscapeJava("single quote should not be escaped", "'", "'"); 
+         assertEscapeJava("\\\\\\b
+@Test 
+     public void testEscapeJava1449() throws IOException { 
+         assertEquals(null, StringEscapeUtils.escapeJava(null)); 
+         try { 
+             StringEscapeUtils.ESCAPE_JAVA.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.ESCAPE_JAVA.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+          
+         assertEscapeJava("empty string", "", ""); 
+         assertEscapeJava(FOO, FOO); 
+         assertEscapeJava("tab", "\\t", "\t"); 
+         assertEscapeJava("backslash", "\\\\", "\\"); 
+         assertEscapeJava("single quote should not be escaped", "'", "'"); 
+         assertEscapeJava("\\\\\\b
+@Test 
+     public void testEscapeEcmaScript1450() { 
+         assertEquals(null, StringEscapeUtils.escapeEcmaScript(null)); 
+         try { 
+             StringEscapeUtils.ESCAPE_ECMASCRIPT.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.ESCAPE_ECMASCRIPT.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+          
+         assertEquals("He didn\\'t say, \\\"stop!\\\"", StringEscapeUtils.escapeEcmaScript("He didn't say, \"stop!\"")); 
+         assertEquals("document.getElementById(\\\"test\\\").value = \\'<script>alert(\\'aaa\\');<\\/script>\\';",  
+                 StringEscapeUtils.escapeEcmaScript("document.getElementById(\"test\").
+@Test 
+     public void testEscapeEcmaScript1451() { 
+         assertEquals(null, StringEscapeUtils.escapeEcmaScript(null)); 
+         try { 
+             StringEscapeUtils.ESCAPE_ECMASCRIPT.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.ESCAPE_ECMASCRIPT.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+          
+         assertEquals("He didn\\'t say, \\\"stop!\\\"", StringEscapeUtils.escapeEcmaScript("He didn't say, \"stop!\"")); 
+         assertEquals("document.getElementById(\\\"test\\\").value = \\'<script>alert(\\'aaa\\');<\\/script>\\';",  
+                 StringEscapeUtils.escapeEcmaScript("document.getElementById(\"test\").
+@Test 
+     public void testEscapeJson1452() { 
+         assertEquals(null, StringEscapeUtils.escapeJson(null)); 
+         try { 
+             StringEscapeUtils.ESCAPE_JSON.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.ESCAPE_JSON.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+  
+         assertEquals("He didn't say, \\\"stop!\\\"", StringEscapeUtils.escapeJson("He didn't say, \"stop!\"")); 
+  
+         String expected = "\\\"foo\\\" isn't \\\"bar\\\". specials: \\b\\r\\n\\f\\t\\\\\\/"; 
+         String input ="\"foo\" isn't \"bar\". specials: \b\r\n\f\t\\/"; 
+  
+         assertEquals
+@Test 
+     public void testEscapeJson1453() { 
+         assertEquals(null, StringEscapeUtils.escapeJson(null)); 
+         try { 
+             StringEscapeUtils.ESCAPE_JSON.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.ESCAPE_JSON.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+  
+         assertEquals("He didn't say, \\\"stop!\\\"", StringEscapeUtils.escapeJson("He didn't say, \"stop!\"")); 
+  
+         String expected = "\\\"foo\\\" isn't \\\"bar\\\". specials: \\b\\r\\n\\f\\t\\\\\\/"; 
+         String input ="\"foo\" isn't \"bar\". specials: \b\r\n\f\t\\/"; 
+  
+         assertEquals
+@Test 
+     public void testUnescapeJava1454() throws IOException { 
+         assertEquals(null, StringEscapeUtils.unescapeJava(null)); 
+         try { 
+             StringEscapeUtils.UNESCAPE_JAVA.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.UNESCAPE_JAVA.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.unescapeJava("\\u02-3"); 
+             fail(); 
+         } catch (final RuntimeException ex) { 
+         } 
+          
+         assertUnescapeJava("test", ""); 
+         assertUnescapeJava("test", "test"); [
+@Test 
+     public void testUnescapeJava1455() throws IOException { 
+         assertEquals(null, StringEscapeUtils.unescapeJava(null)); 
+         try { 
+             StringEscapeUtils.UNESCAPE_JAVA.translate(null, null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.UNESCAPE_JAVA.translate("", null); 
+             fail(); 
+         } catch (final IOException ex) { 
+             fail(); 
+         } catch (final IllegalArgumentException ex) { 
+         } 
+         try { 
+             StringEscapeUtils.unescapeJava("\\u02-3"); 
+             fail(); 
+         } catch (final RuntimeException ex) { 
+         } 
+          
+         assertUnescapeJava("test", ""); 
+         assertUnescapeJava("test", "test"); [
+@Test 
+     public void testEscapeHiragana1456() { 
+         // Some random Japanese Unicode characters 
+         final String original = "\u304B\u304C\u3068"; 
+         final String escaped = StringEscapeUtils.escapeHtml4(original); 
+         assertEquals( "Hiragana character Unicode behaviour should not be being escaped by escapeHtml4", 
+         original, escaped); 
+  
+         final String unescaped = StringEscapeUtils.unescapeHtml4( escaped ); 
+  
+         assertEquals( "Hiragana character Unicode behaviour has changed - expected no unescaping", escaped, unescaped); 
+     } 
+  
+     /** 
+      * Tests https://issues.apache.org/jira/browse/LANG-708 
+      *  
+      * @throws IOException 
+      *             if an I/O error occurs 
+      */ 
+
+@Test 
+     public void testEscapeHiragana1457() { 
+         // Some random Japanese Unicode characters 
+         final String original = "\u304B\u304C\u3068"; 
+         final String escaped = StringEscapeUtils.escapeHtml4(original); 
+         assertEquals( "Hiragana character Unicode behaviour should not be being escaped by escapeHtml4", 
+         original, escaped); 
+  
+         final String unescaped = StringEscapeUtils.unescapeHtml4( escaped ); 
+  
+         assertEquals( "Hiragana character Unicode behaviour has changed - expected no unescaping", escaped, unescaped); 
+     } 
+  
+     /** 
+      * Tests https://issues.apache.org/jira/browse/LANG-708 
+      *  
+      * @throws IOException 
+      *             if an I/O error occurs 
+      */ 
+
+@Test 
+     public void testEscapeSurrogatePairs1458() throws Exception { 
+         assertEquals("\uD83D\uDE30", StringEscapeUtils.escapeCsv("\uD83D\uDE30")); 
+         // Examples from https://en.wikipedia.org/wiki/UTF-16 
+         assertEquals("\uD800\uDC00", StringEscapeUtils.escapeCsv("\uD800\uDC00")); 
+         assertEquals("\uD834\uDD1E", StringEscapeUtils.escapeCsv("\uD834\uDD1E")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeCsv("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeHtml3("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeHtml4("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeXml("\uDBFF\uDFFD")); 
+     } 
+      
+     /** 
+      * Tests LANG-858. 
+      *  
+      * @throws Exception 
+      */ 
+
+@Test 
+     public void testEscapeSurrogatePairs1459() throws Exception { 
+         assertEquals("\uD83D\uDE30", StringEscapeUtils.escapeCsv("\uD83D\uDE30")); 
+         // Examples from https://en.wikipedia.org/wiki/UTF-16 
+         assertEquals("\uD800\uDC00", StringEscapeUtils.escapeCsv("\uD800\uDC00")); 
+         assertEquals("\uD834\uDD1E", StringEscapeUtils.escapeCsv("\uD834\uDD1E")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeCsv("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeHtml3("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeHtml4("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.escapeXml("\uDBFF\uDFFD")); 
+     } 
+      
+     /** 
+      * Tests LANG-858. 
+      *  
+      * @throws Exception 
+      */ 
+
+@Test 
+     public void testStandaloneAmphersand1460() { 
+         assertEquals("<P&O>", StringEscapeUtils.unescapeHtml4("&lt;P&O&gt;")); 
+         assertEquals("test & <", StringEscapeUtils.unescapeHtml4("test & &lt;")); 
+         assertEquals("<P&O>", StringEscapeUtils.unescapeXml("&lt;P&O&gt;")); 
+         assertEquals("test & <", StringEscapeUtils.unescapeXml("test & &lt;")); 
+     } 
+  
+
+@Test 
+     public void testStandaloneAmphersand1461() { 
+         assertEquals("<P&O>", StringEscapeUtils.unescapeHtml4("&lt;P&O&gt;")); 
+         assertEquals("test & <", StringEscapeUtils.unescapeHtml4("test & &lt;")); 
+         assertEquals("<P&O>", StringEscapeUtils.unescapeXml("&lt;P&O&gt;")); 
+         assertEquals("test & <", StringEscapeUtils.unescapeXml("test & &lt;")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeSurrogatePairs1462() throws Exception { 
+         assertEquals("\uD83D\uDE30", StringEscapeUtils.unescapeCsv("\uD83D\uDE30")); 
+         // Examples from https://en.wikipedia.org/wiki/UTF-16 
+         assertEquals("\uD800\uDC00", StringEscapeUtils.unescapeCsv("\uD800\uDC00")); 
+         assertEquals("\uD834\uDD1E", StringEscapeUtils.unescapeCsv("\uD834\uDD1E")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.unescapeCsv("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.unescapeHtml3("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.unescapeHtml4("\uDBFF\uDFFD")); 
+     } 
+  
+     /** 
+      * Tests {@code appendIfMissing}. 
+      */ 
+
+@Test 
+     public void testUnescapeSurrogatePairs1463() throws Exception { 
+         assertEquals("\uD83D\uDE30", StringEscapeUtils.unescapeCsv("\uD83D\uDE30")); 
+         // Examples from https://en.wikipedia.org/wiki/UTF-16 
+         assertEquals("\uD800\uDC00", StringEscapeUtils.unescapeCsv("\uD800\uDC00")); 
+         assertEquals("\uD834\uDD1E", StringEscapeUtils.unescapeCsv("\uD834\uDD1E")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.unescapeCsv("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.unescapeHtml3("\uDBFF\uDFFD")); 
+         assertEquals("\uDBFF\uDFFD", StringEscapeUtils.unescapeHtml4("\uDBFF\uDFFD")); 
+     } 
+  
+     /** 
+      * Tests {@code appendIfMissing}. 
+      */ 
+
+@Test 
+     public void testEscapeXml1464() throws Exception { 
+         assertEquals("&lt;abc&gt;", StringEscapeUtils.escapeXml("<abc>")); 
+         assertEquals("<abc>", StringEscapeUtils.unescapeXml("&lt;abc&gt;")); 
+  
+         assertEquals("XML should not escape >0x7f values", 
+                 "\u00A1", StringEscapeUtils.escapeXml("\u00A1")); 
+         assertEquals("XML should be able to unescape >0x7f values", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with one leading 0", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#0160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with two leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#00160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with three leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#000160;")); 
+  
+
+@Test 
+     public void testEscapeXml1465() throws Exception { 
+         assertEquals("&lt;abc&gt;", StringEscapeUtils.escapeXml("<abc>")); 
+         assertEquals("<abc>", StringEscapeUtils.unescapeXml("&lt;abc&gt;")); 
+  
+         assertEquals("XML should not escape >0x7f values", 
+                 "\u00A1", StringEscapeUtils.escapeXml("\u00A1")); 
+         assertEquals("XML should be able to unescape >0x7f values", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with one leading 0", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#0160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with two leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#00160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with three leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#000160;")); 
+  
+
+@Test 
+     public void testEscapeXml1466() throws Exception { 
+         assertEquals("&lt;abc&gt;", StringEscapeUtils.escapeXml("<abc>")); 
+         assertEquals("<abc>", StringEscapeUtils.unescapeXml("&lt;abc&gt;")); 
+  
+         assertEquals("XML should not escape >0x7f values", 
+                 "\u00A1", StringEscapeUtils.escapeXml("\u00A1")); 
+         assertEquals("XML should be able to unescape >0x7f values", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with one leading 0", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#0160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with two leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#00160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with three leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#000160;")); 
+  
+
+@Test 
+     public void testEscapeXml1467() throws Exception { 
+         assertEquals("&lt;abc&gt;", StringEscapeUtils.escapeXml("<abc>")); 
+         assertEquals("<abc>", StringEscapeUtils.unescapeXml("&lt;abc&gt;")); 
+  
+         assertEquals("XML should not escape >0x7f values", 
+                 "\u00A1", StringEscapeUtils.escapeXml("\u00A1")); 
+         assertEquals("XML should be able to unescape >0x7f values", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with one leading 0", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#0160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with two leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#00160;")); 
+         assertEquals("XML should be able to unescape >0x7f values with three leading 0s", 
+                 "\u00A0", StringEscapeUtils.unescapeXml("&#000160;")); 
+  
+
+@Test 
+     public void testEscapeCsvString1468() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.escapeCsv("foo.bar")); 
+         assertEquals("\"foo,bar\"",      StringEscapeUtils.escapeCsv("foo,bar")); 
+         assertEquals("\"foo\nbar\"",     StringEscapeUtils.escapeCsv("foo\nbar")); 
+         assertEquals("\"foo\rbar\"",     StringEscapeUtils.escapeCsv("foo\rbar")); 
+         assertEquals("\"\"\"\"\"\"",  StringEscapeUtils.escapeCsv("foo\"bar")); 
+         assertEquals("",    StringEscapeUtils.escapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.escapeCsv(null)); 
+     } 
+  
+
+@Test 
+     public void testEscapeCsvString1469() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.escapeCsv("foo.bar")); 
+         assertEquals("\"foo,bar\"",      StringEscapeUtils.escapeCsv("foo,bar")); 
+         assertEquals("\"foo\nbar\"",     StringEscapeUtils.escapeCsv("foo\nbar")); 
+         assertEquals("\"foo\rbar\"",     StringEscapeUtils.escapeCsv("foo\rbar")); 
+         assertEquals("\"\"\"\"\"\"",  StringEscapeUtils.escapeCsv("foo\"bar")); 
+         assertEquals("",    StringEscapeUtils.escapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.escapeCsv(null)); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1470() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testUnescapeCsvString1471() throws Exception { 
+         assertEquals("foo.bar",          StringEscapeUtils.unescapeCsv("foo.bar")); 
+         assertEquals("foo,bar",      StringEscapeUtils.unescapeCsv("\"foo,bar\"")); 
+         assertEquals("foo\nbar",     StringEscapeUtils.unescapeCsv("\"foo\nbar\"")); 
+         assertEquals("foo\rbar",     StringEscapeUtils.unescapeCsv("\"foo\rbar\"")); 
+         assertEquals("foo\"bar",   StringEscapeUtils.unescapeCsv("\"foo\"\"bar\"")); 
+         assertEquals("",   StringEscapeUtils.unescapeCsv("")); 
+         assertEquals(null, StringEscapeUtils.unescapeCsv(null)); 
+  
+         assertEquals("\"foo.bar\"",          StringEscapeUtils.unescapeCsv("\"foo.bar\"")); 
+     } 
+  
+
+@Test 
+     public void testIsWithCompare1472(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+

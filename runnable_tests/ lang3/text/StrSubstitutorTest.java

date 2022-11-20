@@ -1,0 +1,84 @@
+@Test 
+     public void testIntegerWithTransients289() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients290() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients291() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients292() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients293() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients294() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients295() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients296() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients297() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients298() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients299() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients300() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients301() { 
+         testInteger(true); 
+     } 
+  
+
+@Test 
+     public void testIntegerWithTransients302() { 
+         testInteger(true); 
+     } 
+  
+

@@ -1,0 +1,132 @@
+@Test 
+     public void testToString237() throws Exception { 
+         assertEquals("(null,null)", ImmutablePair.of(null, null).toString()); 
+         assertEquals("(null,two)", ImmutablePair.of(null, "two").toString()); 
+         assertEquals("(one,null)", ImmutablePair.of("one", null).toString()); 
+         assertEquals("(one,two)", ImmutablePair.of("one", "two").toString()); 
+     } 
+  
+
+@Test 
+     public void testToString238() throws Exception { 
+         assertEquals("(null,null)", ImmutablePair.of(null, null).toString()); 
+         assertEquals("(null,two)", ImmutablePair.of(null, "two").toString()); 
+         assertEquals("(one,null)", ImmutablePair.of("one", null).toString()); 
+         assertEquals("(one,two)", ImmutablePair.of("one", "two").toString()); 
+     } 
+  
+
+@Test 
+     public void testToStringCustom239() throws Exception { 
+         final Calendar date = Calendar.getInstance(); 
+         date.set(2011, Calendar.APRIL, 25); 
+         final Pair<String, Calendar> pair = Pair.of("DOB", date); 
+         assertEquals("Test created on " + "04-25-2011", pair.toString("Test created on %2$tm-%2$td-%2$tY")); 
+     } 
+  
+
+@Test 
+     public void testContextedException241() { 
+         exceptionContext = new ContextedException(); 
+         final String message = exceptionContext.getMessage(); 
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf("ContextedException")>=0); 
+         assertTrue(StringUtils.isEmpty(message)); 
+     } 
+  
+
+@Test 
+     public void testContextedException242() { 
+         exceptionContext = new ContextedException(); 
+         final String message = exceptionContext.getMessage(); 
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf("ContextedException")>=0); 
+         assertTrue(StringUtils.isEmpty(message)); 
+     } 
+  
+
+@Test 
+     public void testContextedException243() { 
+         exceptionContext = new ContextedException(); 
+         final String message = exceptionContext.getMessage(); 
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf("ContextedException")>=0); 
+         assertTrue(StringUtils.isEmpty(message)); 
+     } 
+  
+
+@Test 
+     public void testContextedExceptionString244() { 
+         exceptionContext = new ContextedException(TEST_MESSAGE); 
+         assertEquals(TEST_MESSAGE, exceptionContext.getMessage()); 
+          
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf(TEST_MESSAGE)>=0); 
+     } 
+  
+
+@Test 
+     public void testContextedExceptionString245() { 
+         exceptionContext = new ContextedException(TEST_MESSAGE); 
+         assertEquals(TEST_MESSAGE, exceptionContext.getMessage()); 
+          
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf(TEST_MESSAGE)>=0); 
+     } 
+  
+
+@Test 
+     public void testContextedExceptionString246() { 
+         exceptionContext = new ContextedException(TEST_MESSAGE); 
+         assertEquals(TEST_MESSAGE, exceptionContext.getMessage()); 
+          
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf(TEST_MESSAGE)>=0); 
+     } 
+  
+
+@Test 
+     public void testContextedExceptionThrowable247() { 
+         exceptionContext = new ContextedException(new Exception(TEST_MESSAGE)); 
+         final String message = exceptionContext.getMessage(); 
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf("ContextedException")>=0); 
+         assertTrue(trace.indexOf(TEST_MESSAGE)>=0); 
+         assertTrue(message.indexOf(TEST_MESSAGE)>=0); 
+     } 
+  
+
+@Test 
+     public void testContextedExceptionThrowable248() { 
+         exceptionContext = new ContextedException(new Exception(TEST_MESSAGE)); 
+         final String message = exceptionContext.getMessage(); 
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf("ContextedException")>=0); 
+         assertTrue(trace.indexOf(TEST_MESSAGE)>=0); 
+         assertTrue(message.indexOf(TEST_MESSAGE)>=0); 
+     } 
+  
+
+@Test 
+     public void testContextedExceptionThrowable249() { 
+         exceptionContext = new ContextedException(new Exception(TEST_MESSAGE)); 
+         final String message = exceptionContext.getMessage(); 
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf("ContextedException")>=0); 
+         assertTrue(trace.indexOf(TEST_MESSAGE)>=0); 
+         assertTrue(message.indexOf(TEST_MESSAGE)>=0); 
+     } 
+  
+
+@Test 
+     public void testContextedExceptionStringThrowable250() { 
+         exceptionContext = new ContextedException(TEST_MESSAGE_2, new Exception(TEST_MESSAGE)); 
+         final String message = exceptionContext.getMessage(); 
+         final String trace = ExceptionUtils.getStackTrace(exceptionContext); 
+         assertTrue(trace.indexOf("ContextedException")>=0); 
+         assertTrue(trace.indexOf(TEST_MESSAGE)>=0); 
+         assertTrue(trace.indexOf(TEST_MESSAGE_2)>=0); 
+         assertTrue(message.indexOf(TEST_MESSAGE_2)>=0); 
+     } 
+      
+

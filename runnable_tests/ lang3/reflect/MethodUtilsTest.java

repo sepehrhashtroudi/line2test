@@ -1,0 +1,748 @@
+@Test 
+     public void testFormatUTC1194() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern())); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime().getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern())); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), Locale.US)); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime().getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), Locale.US)); 
+     } 
+      
+
+@Test 
+     public void testDateTimeISO1195(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testDateTimeISO1196(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testFormatUTC1197() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern())); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime().getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern())); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), Locale.US)); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime().getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), Locale.US)); 
+     } 
+      
+
+@Test 
+     public void testFormatUTC1198() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern())); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime().getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern())); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), Locale.US)); 
+          
+         assertEquals ("2005-01-01T12:00:00", DateFormatUtils.formatUTC(c.getTime().getTime(), DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), Locale.US)); 
+     } 
+      
+
+@Test 
+     public void testFormat1199() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         c.setTimeZone(TimeZone.getDefault()); 
+         final StringBuilder buffer = new StringBuilder (); 
+         final int year = c.get(Calendar.YEAR); 
+         final int month = c.get(Calendar.MONTH) + 1; 
+         final int day = c.get(Calendar.DAY_OF_MONTH); 
+         final int hour = c.get(Calendar.HOUR_OF_DAY); 
+         buffer.append (year); 
+         buffer.append(month); 
+         buffer.append(day); 
+         buffer.append(hour); 
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime().getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH", Locale.US)); 
+          
+         assertEquals(buffer.toString(), Date
+@Test 
+     public void testFormat1200() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         c.setTimeZone(TimeZone.getDefault()); 
+         final StringBuilder buffer = new StringBuilder (); 
+         final int year = c.get(Calendar.YEAR); 
+         final int month = c.get(Calendar.MONTH) + 1; 
+         final int day = c.get(Calendar.DAY_OF_MONTH); 
+         final int hour = c.get(Calendar.HOUR_OF_DAY); 
+         buffer.append (year); 
+         buffer.append(month); 
+         buffer.append(day); 
+         buffer.append(hour); 
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime().getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH", Locale.US)); 
+          
+         assertEquals(buffer.toString(), Date
+@Test 
+     public void testFormatCalendar1201() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         c.setTimeZone(TimeZone.getDefault()); 
+         final StringBuilder buffer = new StringBuilder (); 
+         final int year = c.get(Calendar.YEAR); 
+         final int month = c.get(Calendar.MONTH) + 1; 
+         final int day = c.get(Calendar.DAY_OF_MONTH); 
+         final int hour = c.get(Calendar.HOUR_OF_DAY); 
+         buffer.append (year); 
+         buffer.append(month); 
+         buffer.append(day); 
+         buffer.append(hour); 
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH", Locale.US)); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c
+@Test 
+     public void testFormatCalendar1202() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         c.setTimeZone(TimeZone.getDefault()); 
+         final StringBuilder buffer = new StringBuilder (); 
+         final int year = c.get(Calendar.YEAR); 
+         final int month = c.get(Calendar.MONTH) + 1; 
+         final int day = c.get(Calendar.DAY_OF_MONTH); 
+         final int hour = c.get(Calendar.HOUR_OF_DAY); 
+         buffer.append (year); 
+         buffer.append(month); 
+         buffer.append(day); 
+         buffer.append(hour); 
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH", Locale.US)); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c
+@Test 
+     public void testFormatCalendar1203() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         c.setTimeZone(TimeZone.getDefault()); 
+         final StringBuilder buffer = new StringBuilder (); 
+         final int year = c.get(Calendar.YEAR); 
+         final int month = c.get(Calendar.MONTH) + 1; 
+         final int day = c.get(Calendar.DAY_OF_MONTH); 
+         final int hour = c.get(Calendar.HOUR_OF_DAY); 
+         buffer.append (year); 
+         buffer.append(month); 
+         buffer.append(day); 
+         buffer.append(hour); 
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH", Locale.US)); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c
+@Test 
+     public void testFormatCalendar1204() { 
+         final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC")); 
+         c.set(2005,0,1,12,0,0); 
+         c.setTimeZone(TimeZone.getDefault()); 
+         final StringBuilder buffer = new StringBuilder (); 
+         final int year = c.get(Calendar.YEAR); 
+         final int month = c.get(Calendar.MONTH) + 1; 
+         final int day = c.get(Calendar.DAY_OF_MONTH); 
+         final int hour = c.get(Calendar.HOUR_OF_DAY); 
+         buffer.append (year); 
+         buffer.append(month); 
+         buffer.append(day); 
+         buffer.append(hour); 
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c.getTime(), "yyyyMdH")); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c, "yyyyMdH", Locale.US)); 
+          
+         assertEquals(buffer.toString(), DateFormatUtils.format(c
+@Test 
+     public void testDateTimeISO1205(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testDateTimeISO1206(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testDateTimeISO1207(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testDateTimeISO1208(){ 
+         final TimeZone timeZone = TimeZone.getTimeZone("GMT-3"); 
+         final Calendar cal = Calendar.getInstance(timeZone); 
+         cal.set(2002,1,23,9,11,12); 
+         String text = DateFormatUtils.format(cal.getTime(),  
+                         DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.format(cal.getTime().getTime(),  
+                       DateFormatUtils.ISO_DATETIME_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12", text); 
+         text = DateFormatUtils.ISO_DATETIME_FORMAT.format(cal); 
+         assertEquals("2002-02-23T09:11:12", text); 
+          
+         text = DateFormatUtils.format(cal.getTime(),  
+                       DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT.getPattern(), timeZone); 
+         assertEquals("2002-02-23T09:11:12-03:00
+@Test 
+     public void testIntersectionWith1495() { 
+         assertSame(intRange, intRange.intersectionWith(intRange)); 
+         assertSame(byteRange, byteRange.intersectionWith(byteRange)); 
+         assertSame(longRange, longRange.intersectionWith(longRange)); 
+         assertSame(floatRange, floatRange.intersectionWith(floatRange)); 
+         assertSame(doubleRange, doubleRange.intersectionWith(doubleRange)); 
+  
+         assertEquals(Range.between(10, 15), intRange.intersectionWith(Range.between(5, 15))); 
+     } 
+  
+
+@Test 
+     public void testComparableConstructors1496() { 
+         final Comparable c =  
+             new Comparable() {  
+                 @Override 
+                 public int compareTo(final Object other) { 
+                     return 1; 
+                 } 
+             }; 
+         final Range r1 = Range.is(c); 
+         final Range r2 = Range.between(c, c); 
+         assertEquals(true, r1.isNaturalOrdering()); 
+         assertEquals(true, r2.isNaturalOrdering()); 
+     } 
+  
+
+@Test 
+     public void testComparableConstructors1497() { 
+         final Comparable c =  
+             new Comparable() {  
+                 @Override 
+                 public int compareTo(final Object other) { 
+                     return 1; 
+                 } 
+             }; 
+         final Range r1 = Range.is(c); 
+         final Range r2 = Range.between(c, c); 
+         assertEquals(true, r1.isNaturalOrdering()); 
+         assertEquals(true, r2.isNaturalOrdering()); 
+     } 
+  
+
+@Test 
+     public void testIsWithCompare1498(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+
+@Test 
+     public void testIsWithCompare1499(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+
+@Test 
+     public void testIsWithCompare1500(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+
+@Test 
+     public void testIsWithCompare1501(){ 
+         final Comparator<Integer> c = new Comparator<Integer>(){ 
+             @Override 
+             public int compare(final Integer o1, final Integer o2) { 
+                 return 0; // all integers are equal 
+             } 
+         }; 
+         Range<Integer> ri = Range.is(10); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertFalse("should not contain 11",ri.contains(11)); 
+         ri = Range.is(10,c); 
+         assertFalse("should not contain null",ri.contains(null)); 
+         assertTrue("should contain 10",ri.contains(10)); 
+         assertTrue("should contain 11",ri.contains(11)); 
+     } 
+  
+
+@Test 
+     public void testIsAfterRange1502() { 
+         assertFalse(intRange.isAfterRange(null)); 
+          
+         assertTrue(intRange.isAfterRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(5, 10))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 20))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 25))); 
+         assertFalse(intRange.isAfterRange(Range.between(15, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsAfterRange1503() { 
+         assertFalse(intRange.isAfterRange(null)); 
+          
+         assertTrue(intRange.isAfterRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(5, 10))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 20))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 25))); 
+         assertFalse(intRange.isAfterRange(Range.between(15, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsAfterRange1504() { 
+         assertFalse(intRange.isAfterRange(null)); 
+          
+         assertTrue(intRange.isAfterRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(5, 10))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 20))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 25))); 
+         assertFalse(intRange.isAfterRange(Range.between(15, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsAfterRange1505() { 
+         assertFalse(intRange.isAfterRange(null)); 
+          
+         assertTrue(intRange.isAfterRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(5, 10))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 20))); 
+         assertFalse(intRange.isAfterRange(Range.between(5, 25))); 
+         assertFalse(intRange.isAfterRange(Range.between(15, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isAfterRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsStartedBy1506() { 
+         assertFalse(intRange.isStartedBy(null)); 
+          
+         assertFalse(intRange.isStartedBy(5)); 
+         assertTrue(intRange.isStartedBy(10)); 
+         assertFalse(intRange.isStartedBy(15)); 
+         assertFalse(intRange.isStartedBy(20)); 
+         assertFalse(intRange.isStartedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsStartedBy1507() { 
+         assertFalse(intRange.isStartedBy(null)); 
+          
+         assertFalse(intRange.isStartedBy(5)); 
+         assertTrue(intRange.isStartedBy(10)); 
+         assertFalse(intRange.isStartedBy(15)); 
+         assertFalse(intRange.isStartedBy(20)); 
+         assertFalse(intRange.isStartedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsStartedBy1508() { 
+         assertFalse(intRange.isStartedBy(null)); 
+          
+         assertFalse(intRange.isStartedBy(5)); 
+         assertTrue(intRange.isStartedBy(10)); 
+         assertFalse(intRange.isStartedBy(15)); 
+         assertFalse(intRange.isStartedBy(20)); 
+         assertFalse(intRange.isStartedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsStartedBy1509() { 
+         assertFalse(intRange.isStartedBy(null)); 
+          
+         assertFalse(intRange.isStartedBy(5)); 
+         assertTrue(intRange.isStartedBy(10)); 
+         assertFalse(intRange.isStartedBy(15)); 
+         assertFalse(intRange.isStartedBy(20)); 
+         assertFalse(intRange.isStartedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsEndedBy1510() { 
+         assertFalse(intRange.isEndedBy(null)); 
+          
+         assertFalse(intRange.isEndedBy(5)); 
+         assertFalse(intRange.isEndedBy(10)); 
+         assertFalse(intRange.isEndedBy(15)); 
+         assertTrue(intRange.isEndedBy(20)); 
+         assertFalse(intRange.isEndedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsEndedBy1511() { 
+         assertFalse(intRange.isEndedBy(null)); 
+          
+         assertFalse(intRange.isEndedBy(5)); 
+         assertFalse(intRange.isEndedBy(10)); 
+         assertFalse(intRange.isEndedBy(15)); 
+         assertTrue(intRange.isEndedBy(20)); 
+         assertFalse(intRange.isEndedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsEndedBy1512() { 
+         assertFalse(intRange.isEndedBy(null)); 
+          
+         assertFalse(intRange.isEndedBy(5)); 
+         assertFalse(intRange.isEndedBy(10)); 
+         assertFalse(intRange.isEndedBy(15)); 
+         assertTrue(intRange.isEndedBy(20)); 
+         assertFalse(intRange.isEndedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsEndedBy1513() { 
+         assertFalse(intRange.isEndedBy(null)); 
+          
+         assertFalse(intRange.isEndedBy(5)); 
+         assertFalse(intRange.isEndedBy(10)); 
+         assertFalse(intRange.isEndedBy(15)); 
+         assertTrue(intRange.isEndedBy(20)); 
+         assertFalse(intRange.isEndedBy(25)); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1514() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1515() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1516() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testIsBeforeRange1517() { 
+         assertFalse(intRange.isBeforeRange(null)); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 9))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(5, 10))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 20))); 
+         assertFalse(intRange.isBeforeRange(Range.between(5, 25))); 
+         assertFalse(intRange.isBeforeRange(Range.between(15, 25))); 
+          
+         assertTrue(intRange.isBeforeRange(Range.between(21, 25))); 
+          
+         assertFalse(intRange.isBeforeRange(Range.between(10, 20))); 
+     } 
+  
+
+@Test 
+     public void testElementCompareTo1518() { 
+         try { 
+             intRange.elementCompareTo(null); 
+             fail("NullPointerException should have been thrown"); 
+         } catch(final NullPointerException npe) { 
+             // expected 
+         } 
+          
+         assertEquals(-1, intRange.elementCompareTo(5)); 
+         assertEquals(0, intRange.elementCompareTo(10)); 
+         assertEquals(0, intRange.elementCompareTo(15)); 
+         assertEquals(0, intRange.elementCompareTo(20)); 
+         assertEquals(1, intRange.elementCompareTo(25)); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testElementCompareTo1519() { 
+         try { 
+             intRange.elementCompareTo(null); 
+             fail("NullPointerException should have been thrown"); 
+         } catch(final NullPointerException npe) { 
+             // expected 
+         } 
+          
+         assertEquals(-1, intRange.elementCompareTo(5)); 
+         assertEquals(0, intRange.elementCompareTo(10)); 
+         assertEquals(0, intRange.elementCompareTo(15)); 
+         assertEquals(0, intRange.elementCompareTo(20)); 
+         assertEquals(1, intRange.elementCompareTo(25)); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testElementCompareTo1520() { 
+         try { 
+             intRange.elementCompareTo(null); 
+             fail("NullPointerException should have been thrown"); 
+         } catch(final NullPointerException npe) { 
+             // expected 
+         } 
+          
+         assertEquals(-1, intRange.elementCompareTo(5)); 
+         assertEquals(0, intRange.elementCompareTo(10)); 
+         assertEquals(0, intRange.elementCompareTo(15)); 
+         assertEquals(0, intRange.elementCompareTo(20)); 
+         assertEquals(1, intRange.elementCompareTo(25)); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testElementCompareTo1521() { 
+         try { 
+             intRange.elementCompareTo(null); 
+             fail("NullPointerException should have been thrown"); 
+         } catch(final NullPointerException npe) { 
+             // expected 
+         } 
+          
+         assertEquals(-1, intRange.elementCompareTo(5)); 
+         assertEquals(0, intRange.elementCompareTo(10)); 
+         assertEquals(0, intRange.elementCompareTo(15)); 
+         assertEquals(0, intRange.elementCompareTo(20)); 
+         assertEquals(1, intRange.elementCompareTo(25)); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testElementCompareTo1522() { 
+         try { 
+             intRange.elementCompareTo(null); 
+             fail("NullPointerException should have been thrown"); 
+         } catch(final NullPointerException npe) { 
+             // expected 
+         } 
+          
+         assertEquals(-1, intRange.elementCompareTo(5)); 
+         assertEquals(0, intRange.elementCompareTo(10)); 
+         assertEquals(0, intRange.elementCompareTo(15)); 
+         assertEquals(0, intRange.elementCompareTo(20)); 
+         assertEquals(1, intRange.elementCompareTo(25)); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testElementCompareTo1523() { 
+         try { 
+             intRange.elementCompareTo(null); 
+             fail("NullPointerException should have been thrown"); 
+         } catch(final NullPointerException npe) { 
+             // expected 
+         } 
+          
+         assertEquals(-1, intRange.elementCompareTo(5)); 
+         assertEquals(0, intRange.elementCompareTo(10)); 
+         assertEquals(0, intRange.elementCompareTo(15)); 
+         assertEquals(0, intRange.elementCompareTo(20)); 
+         assertEquals(1, intRange.elementCompareTo(25)); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+
+@Test 
+     public void testElementCompareTo1524() { 
+         try { 
+             intRange.elementCompareTo(null); 
+             fail("NullPointerException should have been thrown"); 
+         } catch(final NullPointerException npe) { 
+             // expected 
+         } 
+          
+         assertEquals(-1, intRange.elementCompareTo(5)); 
+         assertEquals(0, intRange.elementCompareTo(10)); 
+         assertEquals(0, intRange.elementCompareTo(15)); 
+         assertEquals(0, intRange.elementCompareTo(20)); 
+         assertEquals(1, intRange.elementCompareTo(25)); 
+     } 
+  
+     //----------------------------------------------------------------------- 
+

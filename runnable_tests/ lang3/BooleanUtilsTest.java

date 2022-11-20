@@ -1,0 +1,70 @@
+@Test 
+     public void testGetSet502() { 
+         final MutableLong mutNum = new MutableLong(0); 
+         assertEquals(0, new MutableLong().longValue()); 
+         assertEquals(Long.valueOf(0), new MutableLong().getValue()); 
+          
+         mutNum.setValue(1); 
+         assertEquals(1, mutNum.longValue()); 
+         assertEquals(Long.valueOf(1), mutNum.getValue()); 
+          
+         mutNum.setValue(Long.valueOf(2)); 
+         assertEquals(2, mutNum.longValue()); 
+         assertEquals(Long.valueOf(2), mutNum.getValue()); 
+          
+         mutNum.setValue(new MutableLong(3)); 
+         assertEquals(3, mutNum.longValue()); 
+         assertEquals(Long.valueOf(3), mutNum.getValue()); 
+     } 
+  
+
+@Test 
+     public void testGetSet503() { 
+         final MutableLong mutNum = new MutableLong(0); 
+         assertEquals(0, new MutableLong().longValue()); 
+         assertEquals(Long.valueOf(0), new MutableLong().getValue()); 
+          
+         mutNum.setValue(1); 
+         assertEquals(1, mutNum.longValue()); 
+         assertEquals(Long.valueOf(1), mutNum.getValue()); 
+          
+         mutNum.setValue(Long.valueOf(2)); 
+         assertEquals(2, mutNum.longValue()); 
+         assertEquals(Long.valueOf(2), mutNum.getValue()); 
+          
+         mutNum.setValue(new MutableLong(3)); 
+         assertEquals(3, mutNum.longValue()); 
+         assertEquals(Long.valueOf(3), mutNum.getValue()); 
+     } 
+  
+
+@Test 
+     public void testGetSet504() { 
+         final MutableLong mutNum = new MutableLong(0); 
+         assertEquals(0, new MutableLong().longValue()); 
+         assertEquals(Long.valueOf(0), new MutableLong().getValue()); 
+          
+         mutNum.setValue(1); 
+         assertEquals(1, mutNum.longValue()); 
+         assertEquals(Long.valueOf(1), mutNum.getValue()); 
+          
+         mutNum.setValue(Long.valueOf(2)); 
+         assertEquals(2, mutNum.longValue()); 
+         assertEquals(Long.valueOf(2), mutNum.getValue()); 
+          
+         mutNum.setValue(new MutableLong(3)); 
+         assertEquals(3, mutNum.longValue()); 
+         assertEquals(Long.valueOf(3), mutNum.getValue()); 
+     } 
+  
+
+@Test 
+     public void testIncrement505() { 
+         final MutableByte mutNum = new MutableByte((byte) 1); 
+         mutNum.increment(); 
+          
+         assertEquals(2, mutNum.intValue()); 
+         assertEquals(2L, mutNum.longValue()); 
+     } 
+  
+
