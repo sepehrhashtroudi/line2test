@@ -16,6 +16,42 @@ method_names_path = "method_names/"
 methods_path = "methods/"
 context_path = "context/"
 
+# project = "lang3"
+# input_database_file = "Lang1f_line2test.txt"
+# path_len = 10
+# test_size = 0.012
+
+# project = "closure"
+# input_database_file = "Closure1f_line2test.txt"
+# path_len = 7
+# # test_size = 0.007
+# test_size = 0.0015
+
+# project = "codec"
+# input_database_file = "Codec1f_line2test.txt"
+# path_len = 8
+# # test_size = 0.007
+# test_size = 0.004
+
+project = "csv"
+input_database_file = "Csv1f_line2test.txt"
+path_len = 9
+# test_size = 0.007
+test_size = 0.01
+
+# project = "time"
+# input_database_file = "Time1f_line2test.txt"
+# path_len = 10
+# # test_size = 0.007
+# test_size = 0.005
+
+# project = "chart"
+# input_database_file = "Chart1f_line2test.txt"
+# path_len = 8
+# # test_size = 0.007
+# test_size = 0.004
+
+
 # if os.path.exists("src_lines.txt"):
 #   os.remove("src_lines.txt")
 # if os.path.exists("tests.txt"):
@@ -31,7 +67,7 @@ if __name__ == "__main__":
 
 
 
-    f = open("Lang1f_line2test.txt")
+    f = open(input_database_file)
     line2test = f.read()
     f.close()
     line2test = line2test.split("\n")
@@ -44,6 +80,7 @@ if __name__ == "__main__":
     methods = ""
     line_plus_method = ""
     src_line_num = 0
+    src_file_found_flag = 0
     
     for line in line2test:
       # print(line)
@@ -51,26 +88,45 @@ if __name__ == "__main__":
       if "<src_file>" in line:
           if("Test" in line):
             print("test#########################################################")
+            src_file_found_flag = 0
           else:
 
             line_src_dict = {}
-            path = line.split("/")[12:]
+            path = line.split("/")[path_len:]
             class_name = line.split("/")[-1].split(".")[0]
             # print("src" + str(path))
             # print(class_name)
-            # print(path)
-            f = open("/".join(path),'rb')
-            src_code = f.readlines()
-            f.close()
+            print("src/" + project +"/" + "/".join(path))
+            if os.path.exists("src/" + project +"/" + "/".join(path)):
+              f = open("src/" + project +"/" + "/".join(path),'rb')
+              src_code = f.readlines()
+              f.close()
+              src_file_found_flag = 1
+            else:
+              print("src file not found")
+              src_file_found_flag = 0
+              continue
 
-            f = open(methods_path+"/".join(path),'rb')
-            methods = f.readlines()
-            f.close()
+            if os.path.exists(methods_path + project +"/" + "/".join(path)):
+              f = open(methods_path+ project +"/" + "/".join(path),'rb')
+              methods = f.readlines()
+              f.close()
+              src_file_found_flag = 1
+            else:
+              print("src file not found")
+              src_file_found_flag = 0
+              continue
+              
 
-            f = open(context_path+"/".join(path),'rb')
-            context = f.readlines()
-            f.close()
-
+            if os.path.exists(context_path+ project +"/" +"/".join(path)):
+              f = open(context_path+ project +"/" +"/".join(path),'rb')
+              context = f.readlines()
+              f.close()
+              src_file_found_flag = 1
+            else:
+              print("src file not found")
+              src_file_found_flag = 0
+              continue
 
             # f = open("src_lines.txt","ab")
             # f.write(str.encode("/".join(path) + "\n"))
@@ -93,7 +149,7 @@ if __name__ == "__main__":
               method_line_num_start = method.split(str.encode("<line_num>:"))[1].split(str.encode(","))[0]
               method_line_num_end = method.split(str.encode("<line_num>:"))[1].split(str.encode(","))[1]
               methods2line[method.split(str.encode("<line_num>:"))[0]] = {"start": int(method_line_num_start), "end": int(method_line_num_end)}
-      if "<line>" in line: 
+      if "<line>" in line and src_file_found_flag == 1: 
         line_num = int(line.split(":")[1]) #real line num starts from 1
         src_line_num = line_num
         src_line = src_code[line_num-1] # in array we should subtrac 1 because its an array and start at zero
@@ -146,9 +202,11 @@ if __name__ == "__main__":
 
 
 
-      if "<test_name>" in line and function_found_flag == 1:
+      if "<test_name>" in line and function_found_flag == 1 and src_file_found_flag ==1:
         test_path = line.split("<###>")[0]
-        test_path = test_path.split(".")[3:-1]
+
+        test_path = test_path.split(":")[-1].strip()
+        test_path = test_path.split(".")[:-1]
         # print(line.split(".")[-1])
         # print(line.split(".")[-1])
         
@@ -158,51 +216,42 @@ if __name__ == "__main__":
         for test_name in test_names:
           if class_name in test_name:
             selected_test_name = test_name.split(".")[-1].strip()+"()"
-            test_path = test_name.split(".")[3:-1]
+            test_path = test_name.split(":")[-1].strip()
+            test_path = test_path.split(".")[:-1]
             # print("test_name ###########################################")
             break
-        f = open("lang3_tests/" +"/".join(test_path[1:])+".java",'rb')
-        tests = f.read()
-        f.close()
+        if os.path.exists(methods_path + project + "_tests/" + "/".join(test_path)+".java"):
+          f = open(methods_path + project + "_tests/" + "/".join(test_path)+".java",'rb')
+          tests = f.read()
+          f.close()
 
-        # f = open("test_path.txt","ab")
-        # f.write(str.encode("/".join(test_path)+".java" +  "\n"))
-        # f.close()
-
-        tests = tests.split(str.encode("\n"))
-        # print(tests)
-        index = 0
-        for test in tests:   
-          # print("**********************************************************************")
-          # print(str.encode(test_name))
-          # print("**********************************************************************")
-          # print(test)
-          if str.encode(selected_test_name) in test.replace(str.encode(" "),str.encode("")): #for geting rid of spaces before () in some tests
-            index += 1
-            if(index>1):
-              print(index)
-              print("more than one test maped to one line")
-              continue
-            line_src_dict[str(src_line_num)] = {"src": line_plus_method , "test": test.split(str.encode("<line_num>"))[0],\
-            "test_path": str.encode("/".join(test_path)+".java")}
-            dataset["/".join(path)] = line_src_dict 
-            # f = open("tests.txt","ab")
-            # f.write(str.encode("@Test") + test.replace( str.encode("\n"), str.encode(" [EOL] "))+str.encode("\n"))
-            # Y.append(str.encode("@Test") + test.replace(str.encode("\n"), str.encode(" [EOL] "))+str.encode("\n"))
-            # f.close()
-        
-        if index == 0: 
-          print("no tests found for a line")
-          print(selected_test_name)
-          print("/".join(test_path)+".java")
-
+          tests = tests.split(str.encode("\n"))
+          # print(tests)
+          index = 0
+          for test in tests:   
+            if str.encode(selected_test_name) in test.replace(str.encode(" "),str.encode("")): #for geting rid of spaces before () in some tests
+              index += 1
+              if(index>1):
+                print(index)
+                print("more than one test maped to one line")
+                continue
+              line_src_dict[str(src_line_num)] = {"src": line_plus_method , "test": test.split(str.encode("<line_num>"))[0],\
+              "test_path": str.encode("/".join(test_path)+".java")}
+              dataset["/".join(path)] = line_src_dict 
+          
+          if index == 0: 
+            print("no tests found for a line")
+            print(selected_test_name)
+            print("/".join(test_path)+".java")
+        else: 
+          print("test_file not found")
     # print(dataset)
-    f = open("covered_lines_new.txt","wb")
-    for key,value in dataset.items():
-      f.write(str.encode(key +  "\n"))
-      for line, _ in value.items():
-        f.write(str.encode(line +  "\n"))
-    f.close()
+    # f = open("covered_lines_new.txt","wb")
+    # for key,value in dataset.items():
+    #   f.write(str.encode(key +  "\n"))
+    #   for line, _ in value.items():
+    #     f.write(str.encode(line +  "\n"))
+    # f.close()
 
 
     df = pd.DataFrame(columns=['methods','tests','info'])
@@ -217,7 +266,7 @@ if __name__ == "__main__":
           df = pd.concat([df,new_row],axis=0, ignore_index=True)
     
     # print(df)
-    data_train, data_test = train_test_split(df, test_size=0.01, random_state=42)
+    data_train, data_test = train_test_split(df, test_size=test_size, random_state=42)
     data_test_copy = data_test.copy(deep=True)
     data_train_copy = data_train.copy(deep=True)
  
@@ -235,14 +284,15 @@ if __name__ == "__main__":
             data_train = data_train.drop(labels=index_train, axis=0, inplace=False)
           else:
             print("drop index not found")
-          print("len train: {}".format(len(data_test_copy)))
           print("len train: {}".format(len(data_train_copy)))
+          print("len test: {}".format(len(data_test_copy)))
+          
           print("len train: {}".format(len(data_train)))
           print("len test: {}".format(len(data_test)))
         
-    with open("train.methods","wb") as train_methods, open("train.tests","wb") as train_tests\
-        , open("test.methods","wb") as test_methods, open("test.tests","wb") as test_tests\
-        , open("test_info.txt","wb") as test_info, open("train_info.txt","wb") as train_info:
+    with open("generated_datasets/"+project+"_train.methods","wb") as train_methods, open("generated_datasets/"+project+"_train.tests","wb") as train_tests\
+        , open("generated_datasets/"+project+"_test.methods","wb") as test_methods, open("generated_datasets/"+project+"_test.tests","wb") as test_tests\
+        , open("generated_datasets/"+project+"_test_info.txt","wb") as test_info, open("generated_datasets/"+project+"_train_info.txt","wb") as train_info:
         for index_train, row_train in  data_train.iterrows():
           train_methods.write(row_train["methods"] +  str.encode("\n"))
           train_tests.write(row_train["tests"] +  str.encode("\n"))
