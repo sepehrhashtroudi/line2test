@@ -33,11 +33,11 @@ context_path = "context/"
 # # test_size = 0.007
 # test_size = 0.004
 
-project = "csv"
-input_database_file = "Csv1f_line2test.txt"
-path_len = 9
-# test_size = 0.007
-test_size = 0.01
+# project = "csv"
+# input_database_file = "Csv1f_line2test.txt"
+# path_len = 9
+# # test_size = 0.007
+# test_size = 0.01
 
 # project = "time"
 # input_database_file = "Time1f_line2test.txt"
@@ -50,6 +50,12 @@ test_size = 0.01
 # path_len = 8
 # # test_size = 0.007
 # test_size = 0.004
+
+project = "compress"
+input_database_file = "Compress1f_line2test.txt"
+path_len = 10
+# test_size = 0.007
+test_size = 0.001
 
 
 # if os.path.exists("src_lines.txt"):
@@ -113,7 +119,7 @@ if __name__ == "__main__":
               f.close()
               src_file_found_flag = 1
             else:
-              print("src file not found")
+              print("methods file not found")
               src_file_found_flag = 0
               continue
               
@@ -124,7 +130,7 @@ if __name__ == "__main__":
               f.close()
               src_file_found_flag = 1
             else:
-              print("src file not found")
+              print("context file not found")
               src_file_found_flag = 0
               continue
 
@@ -266,6 +272,8 @@ if __name__ == "__main__":
           df = pd.concat([df,new_row],axis=0, ignore_index=True)
     
     # print(df)
+    # df["tests"].unique()
+
     data_train, data_test = train_test_split(df, test_size=test_size, random_state=42)
     data_test_copy = data_test.copy(deep=True)
     data_train_copy = data_train.copy(deep=True)
